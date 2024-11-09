@@ -26,6 +26,14 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --button-color: #575757;
+    --bs-table-striped-bg: #04dfff; /* 自定义条纹背景色 */
+    --bs-table-striped-color: #000; /* 自定义条纹文字颜色 */
+
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #e0f7fa !important; /* 自定义条纹背景色 */
+  color: #000; /* 自定义文字颜色 */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -881,7 +889,7 @@ section,
   margin: 0 0 10px 0;
   font-size: 40px;
   font-weight: 700;
-  /* font-family: Yatra One; */
+
   /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
@@ -937,7 +945,6 @@ section,
   z-index: 1;
   padding: 0 5px;
   display: inline-block;
-  font-family: Yatra One;
 }
 
 .hero h2 .underlight:before {
@@ -954,8 +961,12 @@ section,
 .custom-padding {
   padding: 20px; /* 调整为您需要的内边距大小 */
 
-
 }
+.rounded-corners {
+  border-radius: 12px; /* 调整数值以控制圆角大小 */
+  overflow: hidden;    /* 确保内容不会超出圆角边界 */
+}
+
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 30px;
@@ -1863,77 +1874,80 @@ section,
 
 
 
-.custom-table-container {
-  display: grid;
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: 15px 0;
-}
+/*.custom-table-container {*/
+/*  display: grid;*/
+/*  width: fit-content;*/
+/*  width: -moz-fit-content;*/
+/*  margin: 15px 0;*/
+/*}*/
 
-.custom-table-container.center {
-  margin-left: auto;
-  margin-right: auto;
-}
+/*.custom-table-container.center {*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*}*/
 
-.custom-table {
-  display: block;
-  overflow-x: auto;
-  border: 0px solid #666666;
-  border-collapse: collapse;
-  border-spacing: 0;
-  empty-cells: show;
-  margin: 3px;
-  padding: 0;
-}
-
-.custom-table thead {
-  text-align: left;
-  border-bottom: 1px solid #c6c6c6;
-}
-
-.custom-table tfoot {
-  border-top: 1px solid #666666;
-}
-
-.custom-table tr.bg-color-gray {
-  background-color: #dadada;
-}
-
-.custom-table tr.bg-color-light-gray {
-  background-color: #efefef;
-}
-
-.custom-table td,
-.custom-table th {
-  padding: 5px 10px;
-}
+/*.custom-table {*/
+/*  display: block;*/
+/*  overflow-x: auto;*/
+/*  border: 0px solid #666666;*/
+/*  border-collapse: collapse;*/
+/*  border-spacing: 0;*/
+/*  empty-cells: show;*/
+/*  margin: 3px;*/
+/*  padding: 0;*/
+/*}*/
 
 
-/* Default background for all rows */
-.custom-table tr {
-  background-color: white; /* Default color for all rows */
-}
+/*.custom-table thead {*/
+/*  text-align: left;*/
+/*  border-bottom: 1px solid #b11d1d;*/
+/*}*/
 
-.custom-table th {
-  background-color: rgb(198, 214, 244);
-}
+/*.custom-table tfoot {*/
+/*  border-top: 1px solid #666666;*/
+/*}*/
+
+/*.custom-table tr.bg-color-gray {*/
+/*  background-color: #dadada;*/
+/*}*/
+
+/*.custom-table tr.bg-color-light-gray {*/
+/*  background-color: #efefef;*/
+/*}*/
+
+/*.custom-table td,*/
+/*.custom-table th {*/
+/*  padding: 5px 10px;*/
+/*}*/
 
 
-/* Alternate background for even rows */
-.custom-table tr:nth-child(even) {
-  background-color: #eef3f8;
-}
+/*!* Default background for all rows *!*/
+/*.custom-table tr {*/
+/*  background-color: white; !* Default color for all rows *!*/
+/*}*/
+
+/*.custom-table th {*/
+/*  background-color: rgb(198, 214, 244);*/
+/*}*/
+/*.custom-rounded {*/
+/*  border-radius: 20px; !* 可根据需要调整值以实现更明显的圆弧效果 *!*/
+/*}*/
+
+/*!* Alternate background for even rows *!*/
+/*.custom-table tr:nth-child(even) {*/
+/*  background-color: #eef3f8;*/
+/*}*/
 
 
 
 
 
-.custom-table tr.bg-color-light-blue {
-  background-color: #eef3f8;
-}
+/*.custom-table tr.bg-color-light-blue {*/
+/*  background-color: #eef3f8;*/
+/*}*/
 
 
-.custom-table tr.bg-color-blue {
-  background-color: rgb(198, 214, 244);
-}
+/*.custom-table tr.bg-color-blue {*/
+/*  background-color: rgb(198, 214, 244);*/
+/*}*/
 
