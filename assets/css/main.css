@@ -1791,3 +1791,15 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.rules-intro {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.list-unstyled {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
