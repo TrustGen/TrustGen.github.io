@@ -881,7 +881,7 @@ section,
   margin: 0 0 10px 0;
   font-size: 40px;
   font-weight: 700;
-  font-family: Yatra One;
+  /* font-family: Yatra One; */
   /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
