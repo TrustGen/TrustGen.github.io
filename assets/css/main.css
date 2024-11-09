@@ -25,6 +25,7 @@
   --accent-color: #0880e8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --button-color: #575757;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -867,7 +868,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
@@ -885,11 +886,26 @@ section,
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
 
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 80%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 899px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+}
+
+/*.row {*/
+/*  --bs-gutter-x: 0.3rem; !* 缩小水平间距 *!*/
+/*  --bs-gutter-y: 0.5rem;  !* 缩小垂直间距 *!*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  margin-top: calc(-1 * var(--bs-gutter-y));*/
+/*  margin-right: calc(-0.1 * var(--bs-gutter-x));*/
+/*  margin-left: calc(-0.1 * var(--bs-gutter-x));*/
+/*}*/
 .img-background {
   position: absolute;
   top: 0;
@@ -935,22 +951,23 @@ section,
   z-index: -1;
 }
 
+.custom-padding {
+  padding: 20px; /* 调整为您需要的内边距大小 */
+
+
+}
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 32px;
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-}
+
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--button-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -958,7 +975,7 @@ section,
   padding: 8px 40px;
   border-radius: 50px;
   transition: 0.5s;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--button-color);
 }
 
 .hero .btn-get-started:hover {
@@ -1842,5 +1859,81 @@ section,
 .list-unstyled {
   font-size: 18px;
   line-height: 1.4;
+}
+
+
+
+.custom-table-container {
+  display: grid;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 15px 0;
+}
+
+.custom-table-container.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-table {
+  display: block;
+  overflow-x: auto;
+  border: 0px solid #666666;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  margin: 3px;
+  padding: 0;
+}
+
+.custom-table thead {
+  text-align: left;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.custom-table tfoot {
+  border-top: 1px solid #666666;
+}
+
+.custom-table tr.bg-color-gray {
+  background-color: #dadada;
+}
+
+.custom-table tr.bg-color-light-gray {
+  background-color: #efefef;
+}
+
+.custom-table td,
+.custom-table th {
+  padding: 5px 10px;
+}
+
+
+/* Default background for all rows */
+.custom-table tr {
+  background-color: white; /* Default color for all rows */
+}
+
+.custom-table th {
+  background-color: rgb(198, 214, 244);
+}
+
+
+/* Alternate background for even rows */
+.custom-table tr:nth-child(even) {
+  background-color: #eef3f8;
+}
+
+
+
+
+
+.custom-table tr.bg-color-light-blue {
+  background-color: #eef3f8;
+}
+
+
+.custom-table tr.bg-color-blue {
+  background-color: rgb(198, 214, 244);
 }
 
