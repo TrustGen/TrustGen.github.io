@@ -51,13 +51,6 @@
   --surface-color: #0077de;
   --contrast-color: #ffffff;
 }
-.dark-background {
-  --background-color: #005cab;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #0077de;
-  --contrast-color: #ffffff;
-}
 
 
 
@@ -72,7 +65,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: Yatra One;
+  font-family: var(--default-font);
 
 }
 
@@ -279,7 +272,7 @@ h6 {
   line-height: 0px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .header .logo {
     order: 1;
   }
@@ -307,7 +300,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .navmenu {
     padding: 0;
   }
@@ -328,9 +321,9 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -414,7 +407,7 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 899px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -842,7 +835,7 @@ section,
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 899px) {
 
   section,
   .section {
@@ -885,8 +878,16 @@ section,
 
 .hero h2 {
   margin: 0 0 10px 0;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
+  font-family: Yatra One;
+  /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
+  /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
+  /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
+
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .img-background {
@@ -896,11 +897,23 @@ section,
   width: 100%;
   height: 100%;
   background-image: url('../img/background.jpg');
+
   background-size: cover;
-  background-position: center;
-  filter: blur(5px); /* 高斯模糊效果 */
+  background-position: top center;
+
   z-index: -1
   ; /* 确保背景在内容之下 */
+}
+.img-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.15); /* 灰色半透明覆盖层 */
+  backdrop-filter: blur(15px); /* 灰色覆盖层上的高斯模糊效果 */
+  z-index: -1;
 }
 
 .hero h2 .underlight {
