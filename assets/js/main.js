@@ -171,3 +171,85 @@
   });
 
 })();
+
+async function loadTableData() {
+  const response = await fetch('table.csv'); // 修改为您的 CSV 文件路径
+  const data = await response.text();
+  console.log('Raw CSV Data:', data); // 输出原始 CSV 数据
+
+  const tableBody = document.getElementById('table-body');
+  const rows = data.split('\n');
+  console.log('Rows:', rows); // 输出所有行数据
+
+  rows.forEach((row, index) => {
+    if (index === 0) return; // 跳过标题行
+
+    const columns = row.split(',');
+    console.log(`Row ${index} Columns:`, columns); // 输出每行的列数据
+
+    // 创建一个新行
+    const tr = document.createElement('tr');
+
+    // Model
+    const tdModel = document.createElement('td');
+    tdModel.textContent = columns[0];
+    tr.appendChild(tdModel);
+
+    // Model Size
+    const tdModelSize = document.createElement('td');
+    tdModelSize.textContent = columns[1];
+    tr.appendChild(tdModelSize);
+
+    // Open-Weight
+    const tdOpenWeight = document.createElement('td');
+    const openWeightSpan = document.createElement('span');
+    openWeightSpan.classList.add(
+        columns[2].trim() === 'Yes' ? 'bg-green-100' : 'bg-yellow-100',
+        'text-green-700',
+        'font-bold',
+        'py-1',
+        'px-3',
+        'rounded-full'
+    );
+    openWeightSpan.textContent = columns[2];
+    tdOpenWeight.appendChild(openWeightSpan);
+    tr.appendChild(tdOpenWeight);
+
+    // Version
+    const tdVersion = document.createElement('td');
+    tdVersion.textContent = columns[3];
+    tr.appendChild(tdVersion);
+
+    // Creator
+    const tdCreator = document.createElement('td');
+    tdCreator.textContent = columns[4];
+    tr.appendChild(tdCreator);
+
+    // Source
+    const tdSource = document.createElement('td');
+    tdSource.textContent = columns[5];
+    tr.appendChild(tdSource);
+
+    // Link
+    const tdLink = document.createElement('td');
+    const link = document.createElement('a');
+    link.href = columns[6];
+    link.target = '_blank';
+    const button = document.createElement('button');
+    button.classList.add('custom-button-flat');
+    const img = document.createElement('img');
+    img.src = `img/${columns[4].toLowerCase()}.png`; // 假设图片名与 Creator 字段对应
+    button.appendChild(img);
+    link.appendChild(button);
+    tdLink.appendChild(link);
+    tr.appendChild(tdLink);
+
+    // 将行添加到表体
+    tableBody.appendChild(tr);
+  });
+
+  console.log('Table Data Loaded Successfully');
+}
+
+// 调用加载数据的函数
+loadTableData();
