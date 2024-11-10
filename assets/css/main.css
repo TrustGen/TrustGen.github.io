@@ -1872,6 +1872,11 @@ section,
   line-height: 1.4;
 }
 
+.section-icon {
+  width: 96px;
+  height: 96px;
+}
+
 
 
 /*.custom-table-container {*/
