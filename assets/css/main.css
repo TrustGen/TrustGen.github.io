@@ -895,13 +895,14 @@ section,
   font-size: 40px;
   font-weight: 700;
 
+
   /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
-
-  background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: color-mix(in srgb, #FFFFFF, transparent 10%);
+  /*background: linear-gradient(180deg, #FFFFFF 0%, transparent 10%);*/
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
 }
 
 @media (max-width: 899px) {
@@ -925,8 +926,8 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../img/background_1.jpg');
-
+  background-image: url('assets/img/background/background_1.jpg');
+  transition: background-image 1s ease-in-out; /* 添加过渡效果 */
   background-size: cover;
   background-position: center center;
 
@@ -941,7 +942,7 @@ section,
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(10px); /* 灰色覆盖层上的高斯模糊效果 */
+  backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: -1;
 }
 
@@ -1880,6 +1881,7 @@ section,
 .section-icon {
   width: 48px;
   height: 48px;
+
 }
 
 
