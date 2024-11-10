@@ -1,0 +1,11 @@
+Model,Model Size,Open-Weight,Version,Creator,Source,Link
+GPT-4o,N/A,No,2024-08-06,OpenAI,OpenAI API,https://openai.com/index/hello-gpt-4o/
+GPT-4o-mini,N/A,No,2024-07-18,OpenAI,OpenAI API,https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
+Claude-3.5-Sonnet,N/A,No,20240620,Anthropic,Anthropic API,https://www.anthropic.com/news/claude-3-5-sonnet
+Claude-3-Haiku,N/A,No,20240307,Anthropic,Anthropic API,https://www.anthropic.com/news/claude-3-family
+Gemini-1.5-Pro,N/A,No,002,Google,Gemini API,https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/
+Gemini-1.5-Flash,N/A,No,002,Google,Gemini API,https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/
+Qwen2-VL-72B,72B,Yes,instruct,Qwen,Qwen API,https://qwenlm.github.io/zh/blog/qwen2-vl/
+GLM-4V-Plus,N/A,No,N/A,ZHIPU AI,Zhipu API,https://bigmodel.cn/dev/howuse/glm-4v
+Llama-3.2-11B-V,11B,Yes,instruct,Meta AI,Deepinfra API,https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/
+Llama-3.2-90B-V,90B,Yes,instruct,Meta AI,Deepinfra API,https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/
