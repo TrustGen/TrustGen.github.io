@@ -230,7 +230,7 @@ const images = [
   'assets/img/background/background_1.jpg',
   'assets/img/background/18.jpg',
   'assets/img/background/30.jpg',
-  'assets/img/background/37.jpg',
+  'assets/img/background/37.jpg'
 ];
 let currentIndex = 0;
 const changeInterval = 10000; // 切换间隔，毫秒
