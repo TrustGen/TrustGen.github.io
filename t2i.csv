@@ -1,0 +1,9 @@
+Model,Model Size,Open-Weight,Version,Creator,Source,Link
+DALL-E 3,N/A,No,N/A,OpenAI,OpenAI API,https://openai.com/index/dall-e-3/
+SD-3.5,8B,Yes,large,Stability AI,Local,https://stability.ai/news/introducing-stable-diffusion-3-5
+SD-3.5,N/A,Yes,large turbo,Stability AI,Local,https://stability.ai/news/introducing-stable-diffusion-3-5
+FLUX-1.1,N/A,No,pro,Black Forset Labs,Replicate API,https://flux1.ai/flux1-1
+Playground 2.5,N/A,Yes,1024px-aesthetic,Playground,Replicate API,https://playground.com/blog/playground-v2-5
+Hunyuan-DiT,N/A,Yes,N/A,Tencent,Local,https://dit.hunyuan.tencent.com/
+Kolors,N/A,Yes,N/A,Kwai,Local,https://www.kolors-ai.com/
+CogView-3-Plus,N/A,Yes,N/A,ZHIPU AI,Zhipu API,https://open.bigmodel.cn/dev/howuse/cogview
