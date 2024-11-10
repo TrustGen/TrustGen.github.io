@@ -1883,6 +1883,15 @@ section,
   height: 48px;
 
 }
+.badge-yes {
+  background-color: #d4edda; /* bg-success-50 */
+  color: #155724; /* success text color */
+}
+
+.badge-no {
+  background-color: #fff3cd; /* bg-warning-50 */
+  color: #856404; /* warning text color */
+}
 
 
 

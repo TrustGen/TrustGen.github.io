@@ -174,9 +174,9 @@ async function loadTableData() {
   try {
     // 加载所有三个CSV文件
     const [llmResponse, lvmResponse, t2iResponse] = await Promise.all([
-      fetch('llm.csv'),
-      fetch('lvm.csv'),
-      fetch('t2i.csv')
+      fetch('assets/data/llm.csv'),
+      fetch('assets/data/lvm.csv'),
+      fetch('assets/data/t2i.csv')
     ]);
 
     if (!llmResponse.ok || !lvmResponse.ok || !t2iResponse.ok) 
@@ -210,7 +210,7 @@ async function loadTableData() {
           
           if (headers[index] === 'Open-Weight') {
             const badge = document.createElement('span');
-            badge.className = col === "Yes" ? 'badge bg-success' : 'badge bg-warning text-dark';
+            badge.className = col === "Yes" ? 'badge badge-yes' : 'badge badge-no text-dark';
             badge.textContent = col || 'No';
             td.appendChild(badge);
           } else if (headers[index] === 'Link') {
