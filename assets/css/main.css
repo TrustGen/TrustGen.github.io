@@ -309,7 +309,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .navmenu {
     padding: 0;
   }
@@ -415,8 +415,13 @@ h6 {
   }
 }
 
+@media (min-width: 900px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
 /* Navmenu - Mobile */
-@media (max-width: 899px) {
+@media (max-width: 799px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -920,10 +925,10 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../img/background.jpg');
+  background-image: url('../img/background_1.jpg');
 
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
 
   z-index: -1
   ; /* 确保背景在内容之下 */
@@ -935,8 +940,8 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, 0.15); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(15px); /* 灰色覆盖层上的高斯模糊效果 */
+  background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
+  backdrop-filter: blur(10px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: -1;
 }
 
@@ -968,7 +973,7 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   margin-bottom: 30px;
   font-size: 32px;
   z-index: 1;
