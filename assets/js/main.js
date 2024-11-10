@@ -220,3 +220,26 @@ async function loadTableData() {
 
 // 调用函数加载数据
 loadTableData();
+
+
+
+// script.js
+
+// script.js
+
+const images = [
+  'assets/img/background_1.jpg',
+  'assets/img/18.jpg',
+  'assets/img/30.jpg',
+  'assets/img/37.jpg'
+];
+let currentIndex = 0;
+const changeInterval = 5000; // 切换间隔，毫秒
+
+function changeBackground() {
+  const background = document.getElementById('background');
+  currentIndex = (currentIndex + 1) % images.length;
+  background.style.backgroundImage = `url('${images[currentIndex]}')`;
+}
+
+setInterval(changeBackground, changeInterval); // 每隔几秒切换背景

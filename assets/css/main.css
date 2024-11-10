@@ -925,8 +925,8 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../img/background_1.jpg');
-
+  /*background-image: url('../img/background_1.jpg');*/
+  transition: background-image 1s ease-in-out; /* 添加过渡效果 */
   background-size: cover;
   background-position: center center;
 
@@ -941,7 +941,7 @@ section,
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(10px); /* 灰色覆盖层上的高斯模糊效果 */
+  backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: -1;
 }
 
