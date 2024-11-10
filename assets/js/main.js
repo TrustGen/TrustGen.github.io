@@ -226,20 +226,26 @@ loadTableData();
 // script.js
 
 // script.js
-
 const images = [
-  'assets/img/background_1.jpg',
-  'assets/img/18.jpg',
-  'assets/img/30.jpg',
-  'assets/img/37.jpg'
+  'assets/img/background/background_1.jpg',
+  'assets/img/background/18.jpg',
+  'assets/img/background/30.jpg',
+  'assets/img/background/37.jpg',
+  'assets/img/background/background_old.jpg'
 ];
 let currentIndex = 0;
-const changeInterval = 5000; // 切换间隔，毫秒
+const changeInterval = 10000; // 切换间隔，毫秒
 
 function changeBackground() {
   const background = document.getElementById('background');
   currentIndex = (currentIndex + 1) % images.length;
   background.style.backgroundImage = `url('${images[currentIndex]}')`;
 }
+
+// 初始化时设置初始背景图片
+document.addEventListener("DOMContentLoaded", () => {
+  const background = document.getElementById('background');
+  background.style.backgroundImage = `url('${images[currentIndex]}')`;
+});
 
 setInterval(changeBackground, changeInterval); // 每隔几秒切换背景
