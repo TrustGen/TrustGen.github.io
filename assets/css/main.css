@@ -2016,7 +2016,6 @@ data-table {
 
 
 .data-table th {
-
   color: white; /* 白色文字 */
   padding: 10px; /* 内边距 */
   font-size: 14pt;
@@ -2027,9 +2026,7 @@ data-table {
 .data-table td {
   padding: 8px; /* 内边距 */
   text-align: center; /* 水平居中 */
-  /*border: #0a3622;*/
-  /*border-width: 3px;*/
-
+  border-right: 0.5px outset #d8d8d8; /* 右边框，设置为需要的颜色和宽度 */
 }
 
 /* Table cell with a data bar */

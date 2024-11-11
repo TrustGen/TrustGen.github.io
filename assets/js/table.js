@@ -87,7 +87,7 @@ function calculateModelColumnWidth(modelNames) {
 
     document.body.removeChild(tempDiv); // Clean up the temporary element
     console.log(maxWidth)
-    return maxWidth + 40; // Add padding/margin (adjust as needed)
+    return maxWidth + 60; // Add padding/margin (adjust as needed)
 }
 
 
