@@ -136,6 +136,8 @@ const processResultsTable = (data, tableId, headerClass) => {
     rows.slice(1).forEach(row => {
         const columns = row.split(',').map(col => col.trim());
         const tr = document.createElement('tr');
+        const min = 50; // Minimum value
+        const max = 100; // Replace 100 with your actual maximum if available
 
         columns.forEach((col, index) => {
             const td = document.createElement('td');
@@ -151,7 +153,10 @@ const processResultsTable = (data, tableId, headerClass) => {
                 // Create a data bar div
                 const dataBar = document.createElement('div');
                 dataBar.classList.add('data-bar');
-                dataBar.style.width = `${value}%`; // Set width based on value
+                const widthPercentage = ((value - min) / (max - min)) * 100;
+
+// Set the data bar width with a limit check to ensure it stays within 0-100%
+                dataBar.style.width = `${Math.max(0, Math.min(100, widthPercentage))}%`;
                 td.appendChild(dataBar);
             } else {
                 td.textContent = col || 'N/A';

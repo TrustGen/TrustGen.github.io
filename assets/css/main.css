@@ -2029,7 +2029,7 @@ td {
   color: #333;
   background-color: transparent;
   font-weight: bold; /* Makes the text more prominent */
-  padding: 0.5em 0; /* Add vertical padding to increase height, if needed */
+  padding: 0.5em 0.5em; /* Add vertical padding to increase height, if needed */
 }
 
 /* The data bar itself */
