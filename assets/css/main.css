@@ -1972,3 +1972,77 @@ section,
 /*  background-color: rgb(198, 214, 244);*/
 /*}*/
 
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+
+  background-color: #8bc6b3;
+  color: white;
+  padding: 10px;
+  text-align: center; /* Center text horizontally */
+}
+
+td {
+  padding: 8px;
+  text-align: center; /* Center text horizontally */
+  position: relative;
+}
+
+/* Styling for alternating column colors */
+.column-odd {
+  background-color: #f9f9f9; /* Light color for odd columns */
+}
+
+.column-even {
+  background-color: #e0f7fa; /* Light color for even columns */
+}
+
+.bar-cell {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.bar-cell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #cde5dc; /* Adjust as needed */
+  z-index: 1;
+}
+
+/* Table cell with a data bar */
+.data-bar-cell {
+  position: relative;
+  text-align: center; /* Center text horizontally */
+  vertical-align: middle; /* Align text vertically */
+  z-index: 2; /* Ensure text is above the bar */
+  color: #333;
+  background-color: transparent;
+  font-weight: bold; /* Makes the text more prominent */
+  padding: 0.5em 0; /* Add vertical padding to increase height, if needed */
+}
+
+/* The data bar itself */
+.data-bar {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0;
+  height: 50%; /* Adjust height as needed */
+  background-color: color-mix(in srgb, #cde5dc, transparent 30%); /* Adjust color */
+  width: 0%; /* Width will be dynamically set in JavaScript */
+  z-index: -1; /* Place behind the text */
+  border-radius: 5px; /* Optional: rounded edges */
+  transform: translateY(-50%); /* Center the bar vertically */
+  pointer-events: none; /* Prevent the bar from interfering with text selection */
+  transition: width 0.3s ease; /* Smooth transition when width changes */
+}

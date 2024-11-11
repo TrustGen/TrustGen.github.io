@@ -170,82 +170,78 @@
 
 })();
 
-async function loadTableData() {
-  try {
-    // 加载所有三个CSV文件
-    const [llmResponse, lvmResponse, t2iResponse] = await Promise.all([
-      fetch('assets/data/llm.csv'),
-      fetch('assets/data/lvm.csv'),
-      fetch('assets/data/t2i.csv')
-    ]);
 
-    if (!llmResponse.ok || !lvmResponse.ok || !t2iResponse.ok) 
-      throw new Error('Failed to fetch CSV files');
+document.addEventListener('DOMContentLoaded', function () {
+  // Configuration for the first Swiper instance
+  const swiperConfig1 = {
+    loop: true,
+    speed: 600,
+    autoplay: {
+      delay: 500,
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+      },
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 80,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 120,
+      },
+    },
+  };
 
-    const [llmData, lvmData, t2iData] = await Promise.all([
-      llmResponse.text(),
-      lvmResponse.text(),
-      t2iResponse.text()
-    ]);
+  // Configuration for the second Swiper instance
+  const swiperConfig2 = {
+    loop: true,
+    speed: 600,
+    autoplay: {
+      delay: 500,
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+      },
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 80,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 120,
+      },
+    },
+  };
 
-    // 处理表格的函数
-    const processTable = (data, tableId) => {
-      const tableBody = document.querySelector(`#${tableId} tbody`);
-      if (!tableBody) throw new Error(`Table body not found for ${tableId}`);
-
-      // 清空现有内容
-      tableBody.innerHTML = '';
-
-      // 解析CSV数据
-      const rows = data.trim().split('\n');
-      const headers = rows[0].split(',').map(h => h.trim());
-
-      // 处理每一行
-      rows.slice(1).forEach(row => {
-        const columns = row.split(',').map(col => col.trim());
-        const tr = document.createElement('tr');
-
-        columns.forEach((col, index) => {
-          const td = document.createElement('td');
-          
-          if (headers[index] === 'Open-Weight') {
-            const badge = document.createElement('span');
-            badge.className = col === "Yes" ? 'badge badge-yes' : 'badge badge-no text-dark';
-            badge.textContent = col || 'No';
-            td.appendChild(badge);
-          } else if (headers[index] === 'Link') {
-            if (col) {
-              const link = document.createElement('a');
-              link.href = col;
-              link.target = '_blank';
-              link.className = 'btn btn-link';
-              link.textContent = 'Visit';
-              td.appendChild(link);
-            } else {
-              td.textContent = 'N/A';
-            }
-          } else {
-            td.textContent = col || 'N/A';
-          }
-          tr.appendChild(td);
-        });
-
-        tableBody.appendChild(tr);
-      });
-    };
-
-    // 处理所有三个表格
-    processTable(llmData, 'llm-table');
-    processTable(lvmData, 'lvm-table');
-    processTable(t2iData, 't2i-table');
-
-  } catch (error) {
-    console.error('Error loading table data:', error);
-  }
-}
-
-// 当DOM加载完成时调用函数
-document.addEventListener('DOMContentLoaded', loadTableData);
+  // Initialize each Swiper instance
+  new Swiper('.swiper1', swiperConfig1);
+  new Swiper('.swiper2', swiperConfig2);
+});
 
 // script.js
 const images = [

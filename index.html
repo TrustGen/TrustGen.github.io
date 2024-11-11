@@ -127,16 +127,15 @@
         <br>
 
 
-        <div class="row gy-10 ">
+        <div class="row gy-10 my-5">
         <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
 <!--    <h3 class=" align-self-center align-self-xl-middle">TL; DR</h3>-->
           <p>
             In this paper, we first establish a standardized set of guidelines that provide a consistent, cross-disciplinary foundation for defining and assessing the trustworthiness of GenFMs. Then, recognizing that current benchmarks focus narrowly on specific model categories and lack a dynamic nature, we introduce TrustGen, a comprehensive and adaptive benchmark for evaluating GenFMs across multiple dimensions of trustworthiness.
           </p>
+          <img src="assets/img/intro.png" class="img-fluid" alt="" >
 <!--          <a href="#" class="about-btn align-self-center align-self-xl-middle"><span>About us</span> <i class="bi bi-chevron-right"></i></a>-->
-        </div class="my-5">
-          <img src="assets/img/intro.png" class="img-fluid" alt="">
-        </div>
+
 
 
       <!-- Icon Boxes in a Horizontal Layout -->
@@ -163,13 +162,6 @@
       </div>
 
 
-      <br>
-      <br>
-      <div class="container" style="margin-top: 10px; margin-bottom: 40px;"> 
-        <br>
-        <!-- <img src="assets/img/intro.png" class="img-fluid" alt=""> -->
-        <br>
-      </div>
       
         <!-- Rules Section -->
 
@@ -399,22 +391,12 @@
 
       <div class="container" data-aos="fade-up">
         <div class="row gy-4" >
-
         <!-- Bootstrap 表格，带有圆角和条纹效果 -->
         <div class="container mt-5">
           <h4>Large Language Models</h4>
           <div class="rounded border border-light overflow-hidden">
             <table class="table table-hover mb-0 custom-table" id="llm-table">
               <thead>
-              <tr class="table-primary"> <!-- LLM表格保持蓝色表头 -->
-                <th>Model</th>
-                <th>Model Size</th>
-                <th>Open-Weight</th>
-                <th>Version</th>
-                <th>Creator</th>
-                <th>Source</th>
-                <th>Link</th>
-              </tr>
               </thead>
               <tbody>
               <!-- JavaScript会填充这里 -->
@@ -428,15 +410,6 @@
           <div class="rounded border border-light overflow-hidden">
             <table class="table table-hover mb-0 custom-table" id="lvm-table">
               <thead>
-              <tr class="table-primary"> <!-- LVM表格使用浅紫色表头 -->
-                <th>Model</th>
-                <th>Model Size</th>
-                <th>Open-Weight</th>
-                <th>Version</th>
-                <th>Creator</th>
-                <th>Source</th>
-                <th>Link</th>
-              </tr>
               </thead>
               <tbody>
               <!-- JavaScript会填充这里 -->
@@ -466,6 +439,17 @@
             </table>
           </div>
         </div>
+          <div class="container mt-5">
+            <h4>LLM Results</h4>
+            <div class="rounded border border-light overflow-hidden">
+              <table class="table  table-striped-columns table-hover mb-0 custom-table" id="llm-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
       </div>
       </div>
     </section>
@@ -586,40 +570,7 @@
 
       <div class="container">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 500
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
+        <div class="swiper init-swiper swiper1">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><img src="assets/img/clients/ND.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/UIUC.png" class="img-fluid" alt=""></div>
@@ -636,40 +587,7 @@
 
       <div class="container">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 500
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
+        <div class="swiper init-swiper swiper2">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><img src="assets/img/clients/UW.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/MIT.png" class="img-fluid" alt=""></div>
@@ -770,6 +688,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/table.js"></script>
+
 
 </body>
 
