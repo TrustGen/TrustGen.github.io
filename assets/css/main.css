@@ -1942,10 +1942,6 @@ section,
 /*}*/
 
 
-/*!* Default background for all rows *!*/
-/*.custom-table tr {*/
-/*  background-color: white; !* Default color for all rows *!*/
-/*}*/
 
 /*.custom-table th {*/
 /*  background-color: rgb(198, 214, 244);*/
@@ -1978,10 +1974,23 @@ section,
 table {
   width: 100%;
   border-collapse: collapse;
+
 }
 
-th {
+/*!* Default background for all rows *!*/
+/*.custom-table tr {*/
+/*  background-color: white; !* Default color for all rows *!*/
+/*}*/
 
+/* Apply rounded corners to each cell */
+.custom-table th td {
+  border-radius: 10px; /* Optional: rounded edges for each cell */
+  background-color: #8bc6b3;; /* Inherits the row background color */
+  padding: 0px; /* Optional: adds spacing inside each cell */
+}
+
+
+th {
   background-color: #8bc6b3;
   color: white;
   padding: 10px;
@@ -1994,14 +2003,6 @@ td {
   position: relative;
 }
 
-/* Styling for alternating column colors */
-.column-odd {
-  background-color: #f9f9f9; /* Light color for odd columns */
-}
-
-.column-even {
-  background-color: #e0f7fa; /* Light color for even columns */
-}
 
 .bar-cell {
   position: relative;
@@ -2024,12 +2025,14 @@ td {
 .data-bar-cell {
   position: relative;
   text-align: center; /* Center text horizontally */
+  font-size: 12pt;
   vertical-align: middle; /* Align text vertically */
-  z-index: 2; /* Ensure text is above the bar */
+  box-sizing: border-box; /* 包含 padding 和 border */
+  z-index: 1; /* Ensure text is above the bar */
   color: #333;
   background-color: transparent;
-  font-weight: bold; /* Makes the text more prominent */
-  padding: 0.5em 0.5em; /* Add vertical padding to increase height, if needed */
+  font-weight: normal; /* Makes the text more prominent */
+  padding: 0.5em 0.5em;
 }
 
 /* The data bar itself */
@@ -2037,12 +2040,14 @@ td {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 0;
-  height: 50%; /* Adjust height as needed */
+  height: 80%; /* Adjust height as needed */
   background-color: color-mix(in srgb, #cde5dc, transparent 30%); /* Adjust color */
   width: 0%; /* Width will be dynamically set in JavaScript */
+
   z-index: -1; /* Place behind the text */
-  border-radius: 5px; /* Optional: rounded edges */
+  border-radius: 8px; /* Optional: rounded edges */
   transform: translateY(-50%); /* Center the bar vertically */
   pointer-events: none; /* Prevent the bar from interfering with text selection */
   transition: width 0.3s ease; /* Smooth transition when width changes */
+
 }

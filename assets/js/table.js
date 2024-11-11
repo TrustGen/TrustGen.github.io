@@ -86,9 +86,9 @@ function calculateModelColumnWidth(modelNames) {
     });
 
     document.body.removeChild(tempDiv); // Clean up the temporary element
-    return maxWidth + 20; // Add padding/margin (adjust as needed)
+    console.log(maxWidth)
+    return maxWidth + 40; // Add padding/margin (adjust as needed)
 }
-
 
 
 // Function to process and render each table with data bars and consistent dimensions
@@ -143,23 +143,41 @@ const processResultsTable = (data, tableId, headerClass) => {
             const td = document.createElement('td');
 
             if (headers[index] === 'Model') {
-                // Model column without bar effect
-                td.textContent = col || 'N/A';
+                // Model column with bold text
+                const modelDiv = document.createElement('div');
+                modelDiv.classList.add('data-bar-cell');
+                modelDiv.style.fontWeight = 'bold'; // Make text bold
+                modelDiv.textContent = col || 'N/A';
+                td.appendChild(modelDiv);
             } else if (!isNaN(col) && col !== '') {
                 // Numeric columns with data bar effect
                 const value = parseFloat(col).toFixed(2);
-                td.classList.add('data-bar-cell'); // Add a class for styling
-                td.textContent = value;
-                // Create a data bar div
+
+                // Create a container div for the data bar and text
+                const cellDiv = document.createElement('div');
+                cellDiv.classList.add('data-bar-cell');
+
+                // Text div
+                const textDiv = document.createElement('div');
+                textDiv.textContent = value;
+
+                // Data bar div
                 const dataBar = document.createElement('div');
                 dataBar.classList.add('data-bar');
                 const widthPercentage = ((value - min) / (max - min)) * 100;
-
-// Set the data bar width with a limit check to ensure it stays within 0-100%
                 dataBar.style.width = `${Math.max(0, Math.min(100, widthPercentage))}%`;
-                td.appendChild(dataBar);
+
+                // Append text and data bar to the cell div
+                cellDiv.appendChild(textDiv);
+                cellDiv.appendChild(dataBar);
+
+                // Append cell div to td
+                td.appendChild(cellDiv);
             } else {
-                td.textContent = col || 'N/A';
+                const defaultDiv = document.createElement('div');
+                defaultDiv.classList.add('data-bar-cell');
+                defaultDiv.textContent = col || 'N/A';
+                td.appendChild(defaultDiv);
             }
             tr.appendChild(td);
         });
@@ -167,6 +185,21 @@ const processResultsTable = (data, tableId, headerClass) => {
         tableBody.appendChild(tr);
     });
 };
+
+// Invalidate cache if data changes or window resizes
+function invalidateModelColumnWidthCache() {
+    cachedModelColumnWidth = null;
+}
+
+// Function to re-render tables on window resize
+function handleResize() {
+    invalidateModelColumnWidthCache(); // Reset cached width
+    loadTableData(); // Re-render the tables with updated dimensions
+}
+
+// Add event listener for window resize
+window.addEventListener('resize', handleResize);
+
 
 // Main function to load and render all tables
 async function loadTableData() {
@@ -190,7 +223,7 @@ async function loadTableData() {
         processModelTable(lvmModels, 'lvm-table', 'table-primary');
         processModelTable(t2iModels, 't2i-table', 'table-primary');
 
-        processResultsTable(llmResults, 'llm-res-table', 'table-secondary');
+        processResultsTable(llmResults, 'llm-res-table', );
 
     } catch (error) {
         console.error('Error loading table data:', error);
@@ -200,254 +233,3 @@ async function loadTableData() {
 // Run the function when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', loadTableData);
 
-//
-// async function loadTableData() {
-//     try {
-//         // Load all three CSV files
-//         const [llmResponse, lvmResponse, t2iResponse] = await Promise.all([
-//             fetch('assets/data/llm.csv'),
-//             fetch('assets/data/lvm.csv'),
-//             fetch('assets/data/t2i.csv')
-//         ]);
-//
-//         if (!llmResponse.ok || !lvmResponse.ok || !t2iResponse.ok)
-//             throw new Error('Failed to fetch CSV files');
-//
-//         const [llmData, lvmData, t2iData] = await Promise.all([
-//             llmResponse.text(),
-//             lvmResponse.text(),
-//             t2iResponse.text()
-//         ]);
-//
-//         // Function to process each table with colored headers
-//         const processTable = (data, tableId, headerClass) => {
-//             const table = document.getElementById(tableId);
-//             const tableHead = table.querySelector('thead');
-//             const tableBody = table.querySelector('tbody');
-//
-//             if (!tableBody || !tableHead)
-//                 throw new Error(`Table elements not found for ${tableId}`);
-//
-//             // Clear existing contents
-//             tableHead.innerHTML = '';
-//             tableBody.innerHTML = '';
-//
-//             // Parse CSV data
-//             const rows = data.trim().split('\n');
-//             const headers = rows[0].split(',').map(h => h.trim());
-//
-//             // Populate table header with the specified color class
-//             const headerRow = document.createElement('tr');
-//             headerRow.className = headerClass;  // Add custom class for header row styling
-//             headers.forEach(header => {
-//                 const th = document.createElement('th');
-//                 th.textContent = header;
-//                 headerRow.appendChild(th);
-//             });
-//             tableHead.appendChild(headerRow);
-//
-//             // Populate table body rows
-//             rows.slice(1).forEach(row => {
-//                 const columns = row.split(',').map(col => col.trim());
-//                 const tr = document.createElement('tr');
-//
-//                 columns.forEach((col, index) => {
-//                     const td = document.createElement('td');
-//
-//                     if (headers[index] === 'Open-Weight') {
-//                         const badge = document.createElement('span');
-//                         badge.className = col === "Yes" ? 'badge badge-yes' : 'badge badge-no text-dark';
-//                         badge.textContent = col || 'No';
-//                         td.appendChild(badge);
-//                     } else if (headers[index] === 'Link') {
-//                         if (col) {
-//                             const link = document.createElement('a');
-//                             link.href = col;
-//                             link.target = '_blank';
-//                             link.className = 'btn btn-link';
-//                             link.textContent = 'Visit';
-//                             td.appendChild(link);
-//                         } else {
-//                             td.textContent = 'N/A';
-//                         }
-//                     } else {
-//                         td.textContent = col || 'N/A';
-//                     }
-//                     tr.appendChild(td);
-//                 });
-//
-//                 tableBody.appendChild(tr);
-//             });
-//         };
-//
-//         // Process all three tables with color classes
-//         processTable(llmData, 'llm-table', 'table-primary');
-//         processTable(lvmData, 'lvm-table', 'table-primary');
-//         processTable(t2iData, 't2i-table', 'table-primary');
-//     } catch (error) {
-//         console.error('Error loading table data:', error);
-//     }
-// }
-//
-// // Run the function when DOM is fully loaded
-// document.addEventListener('DOMContentLoaded', loadTableData);
-//
-//
-//
-// // Function to load all CSV files and render tables
-// async function loadTableData() {
-//     try {
-//         // Load all three CSV files
-//         const [llmResponse, lvmResponse, t2iResponse] = await Promise.all([
-//             fetch('assets/data/llm-res.csv'),
-//         ]);
-//
-//         // Check if all responses are OK
-//         if (!llmResponse.ok || !lvmResponse.ok || !t2iResponse.ok) {
-//             throw new Error('Failed to fetch CSV files');
-//         }
-//
-//         // Read the text content from each response
-//         const [llmData, lvmData, t2iData] = await Promise.all([
-//             llmResponse.text(),
-//             lvmResponse.text(),
-//             t2iResponse.text()
-//         ]);
-//
-//         // Function to process each table with colored headers
-//         const processTable = (data, tableId, headerClass) => {
-//             const table = document.getElementById(tableId);
-//             const tableHead = table.querySelector('thead');
-//             const tableBody = table.querySelector('tbody');
-//
-//             if (!tableBody || !tableHead) {
-//                 throw new Error(`Table elements not found for ${tableId}`);
-//             }
-//
-//             // Clear existing contents
-//             tableHead.innerHTML = '';
-//             tableBody.innerHTML = '';
-//
-//             // Parse CSV data
-//             const rows = data.trim().split('\n');
-//             const headers = rows[0].split(',').map(h => h.trim());
-//
-//             // Populate table header with the specified color class
-//             const headerRow = document.createElement('tr');
-//             headerRow.className = headerClass;  // Add custom class for header row styling
-//             headers.forEach(header => {
-//                 const th = document.createElement('th');
-//                 th.textContent = header;
-//                 headerRow.appendChild(th);
-//             });
-//             tableHead.appendChild(headerRow);
-//
-//             // Populate table body rows
-//             rows.slice(1).forEach(row => {
-//                 const columns = row.split(',').map(col => col.trim());
-//                 const tr = document.createElement('tr');
-//
-//                 columns.forEach((col, index) => {
-//                     const td = document.createElement('td');
-//
-//
-//
-//                     td.textContent = col || 'N/A';
-//
-//                     tr.appendChild(td);
-//                 });
-//
-//                 tableBody.appendChild(tr);
-//             });
-//         };
-//
-//         // Process all three tables with color classes
-//         processTable(llmData, 'llm-table', 'table-primary');
-//         processTable(lvmData, 'lvm-table', 'table-primary');
-//         processTable(t2iData, 't2i-table', 'table-primary');
-//     } catch (error) {
-//         console.error('Error loading table data:', error);
-//     }
-// }
-//
-// // Run the function when DOM is fully loaded
-// document.addEventListener('DOMContentLoaded', loadTableData);
-//
-//
-//
-// // Function to fetch and parse CSV data
-// async function loadAndRenderCSV() {
-//     try {
-//         // Load the CSV file
-//         const response = await fetch('assets/data/llm-res.csv');
-//         if (!response.ok) throw new Error('Failed to fetch CSV file');
-//         const csvData = await response.text();
-//
-//         // Parse the CSV data
-//         const rows = csvData.trim().split('\n');
-//         const headers = rows[0].split(',').map(header => header.trim());
-//
-//         // Convert CSV rows into data objects
-//         const data = rows.slice(1).map(row => {
-//             const values = row.split(',').map(value => value.trim());
-//             return headers.reduce((obj, header, index) => {
-//                 obj[header] = values[index];
-//                 return obj;
-//             }, {});
-//         });
-//
-//         // Render the table with bar effect
-//         renderTable(headers, data);
-//     } catch (error) {
-//         console.error('Error loading CSV data:', error);
-//     }
-// }
-//
-// // Function to render the table with header and bar effect
-// function renderTable(headers, data) {
-//     const table = document.querySelector('#llm-res-table');
-//     const tableHead = table.querySelector('thead');
-//     const tableBody = table.querySelector('tbody');
-//
-//     // Clear any existing content
-//     tableHead.innerHTML = '';
-//     tableBody.innerHTML = '';
-//
-//     // Create header row
-//     const headerRow = document.createElement('tr');
-//     headers.forEach(header => {
-//         const th = document.createElement('th');
-//         th.textContent = header;
-//         headerRow.appendChild(th);
-//     });
-//     tableHead.appendChild(headerRow);
-//
-//     // Create data rows
-//     data.forEach(item => {  // Corrected here to use `data` instead of `rows.slice(1)`
-//         const row = document.createElement('tr');
-//
-//         headers.forEach(key => {
-//             const cell = document.createElement('td');
-//             cell.className = 'bar-cell';
-//
-//             if (key === 'Model') {
-//                 // If it's the Model column, just add the text
-//                 cell.textContent = item[key];
-//             } else {
-//                 // For score columns, add bar effect and set text
-//                 const value = parseFloat(item[key]).toFixed(2);
-//                 cell.textContent = value;
-//                 cell.style.backgroundSize = `${value}% 100%`; // Adjust background fill based on score
-//             }
-//
-//             row.appendChild(cell);
-//         });
-//
-//         tableBody.appendChild(row);
-//     });
-// }
-//
-// // Call the function to load CSV and render table on DOMContentLoaded
-// document.addEventListener('DOMContentLoaded', loadAndRenderCSV);
-//
-//
