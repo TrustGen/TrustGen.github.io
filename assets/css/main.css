@@ -1970,6 +1970,13 @@ section,
 
 
 
+/*!* Default background for all rows *!*/
+/*.custom-table tr {*/
+/*  background-color: white; !* Default color for all rows *!*/
+/*}*/
+
+
+
 
 table {
   width: 100%;
@@ -1977,23 +1984,10 @@ table {
 
 }
 
-/*!* Default background for all rows *!*/
-/*.custom-table tr {*/
-/*  background-color: white; !* Default color for all rows *!*/
-/*}*/
-
-/* Apply rounded corners to each cell */
-.custom-table th td {
-  border-radius: 10px; /* Optional: rounded edges for each cell */
-  background-color: #8bc6b3;; /* Inherits the row background color */
-  padding: 0px; /* Optional: adds spacing inside each cell */
-}
-
-
 th {
-  background-color: #8bc6b3;
   color: white;
   padding: 10px;
+  background-color: #8bc6b3;; /* Inherits the row background color */
   text-align: center; /* Center text horizontally */
 }
 
@@ -2003,22 +1997,39 @@ td {
   position: relative;
 }
 
-
-.bar-cell {
+.custom-table th {
+  padding: 10px; /* 内边距 */
+  text-align: center; /* 水平居中 */
+}
+.custom-table　td {
+  padding: 8px;
+  text-align: center; /* Center text horizontally */
   position: relative;
-  width: 100%;
-  text-align: right;
-  padding-right: 10px;
 }
 
-.bar-cell::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #cde5dc; /* Adjust as needed */
-  z-index: 1;
+
+data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 100px; /* Optional: rounded edges */
+}
+
+
+.data-table th {
+
+  color: white; /* 白色文字 */
+  padding: 10px; /* 内边距 */
+  font-size: 14pt;
+  text-align: center; /* 水平居中 */
+
+}
+
+.data-table td {
+  padding: 8px; /* 内边距 */
+  text-align: center; /* 水平居中 */
+  /*border: #0a3622;*/
+  /*border-width: 3px;*/
+
 }
 
 /* Table cell with a data bar */
@@ -2031,9 +2042,41 @@ td {
   z-index: 1; /* Ensure text is above the bar */
   color: #333;
   background-color: transparent;
+
   font-weight: normal; /* Makes the text more prominent */
   padding: 0.5em 0.5em;
 }
+
+
+
+/* Green table */
+.table-green th {
+  background-color: #8bc6b3; /* 表头的绿色背景 */
+}
+
+.table-green .data-bar {
+  background-color: color-mix(in srgb, #cde5dc, transparent 30%); /* Adjust color */
+}
+
+/* Blue table */
+.table-blue th {
+  background-color: #99d3e5; /* 表头的蓝色背景 */
+}
+
+.table-blue .data-bar {
+  background-color: color-mix(in srgb, #bad4e4, transparent 30%); /* 数据条的蓝色背景 */
+}
+
+/* Orange table */
+.table-orange th {
+  background-color: #f5c189; /* 表头的橙色背景 */
+}
+
+.table-orange .data-bar {
+  background-color: color-mix(in srgb, #f8d7b0, transparent 30%); /* 数据条的橙色背景 */
+}
+
+
 
 /* The data bar itself */
 .data-bar {
@@ -2041,13 +2084,11 @@ td {
   top: 50%; /* Center vertically */
   left: 0;
   height: 80%; /* Adjust height as needed */
-  background-color: color-mix(in srgb, #cde5dc, transparent 30%); /* Adjust color */
-  width: 0%; /* Width will be dynamically set in JavaScript */
 
+  width: 0%; /* Width will be dynamically set in JavaScript */
   z-index: -1; /* Place behind the text */
   border-radius: 8px; /* Optional: rounded edges */
   transform: translateY(-50%); /* Center the bar vertically */
   pointer-events: none; /* Prevent the bar from interfering with text selection */
   transition: width 0.3s ease; /* Smooth transition when width changes */
-
 }

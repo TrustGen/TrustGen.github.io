@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -394,7 +395,7 @@
         <!-- Bootstrap 表格，带有圆角和条纹效果 -->
         <div class="container mt-5">
           <h4>Large Language Models</h4>
-          <div class="rounded border border-light overflow-hidden">
+          <div class="rounded-4 border border-light overflow-hidden">
             <table class="table table-hover mb-0 custom-table" id="llm-table">
               <thead>
               </thead>
@@ -407,8 +408,8 @@
 
         <div class="container mt-5">
           <h4>Vision Language Models</h4>
-          <div class="rounded border border-light overflow-hidden">
-            <table class="table table-hover mb-0 custom-table" id="lvm-table">
+          <div class="rounded-4 border border-light overflow-hidden">
+            <table class="table table-hover mb-0 custom-table" id="vlm-table">
               <thead>
               </thead>
               <tbody>
@@ -420,7 +421,7 @@
 
         <div class="container mt-5">
           <h4>Text-to-Image Models</h4>
-          <div class="rounded border border-light overflow-hidden">
+          <div class="rounded-4 border border-light overflow-hidden">
             <table class="table table-hover mb-0 custom-table" id="t2i-table">
               <thead>
               <tr class="table-primary"> <!-- T2I表格使用浅橙色表头 -->
@@ -441,8 +442,30 @@
         </div>
           <div class="container mt-5">
             <h4>LLM Results</h4>
-            <div class="rounded border border-light overflow-hidden">
-              <table class="custom-table table table-hover mb-0 " id="llm-res-table">
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-green" id="llm-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>VLM Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-orange" id="vlm-res-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h4>T2I Results</h4>
+            <div class="rounded-4 border border-light overflow-hidden">
+              <table class=" table table-hover mb-0 data-table table-blue" id="t2i-res-table">
                 <thead>
                 </thead>
                 <tbody>

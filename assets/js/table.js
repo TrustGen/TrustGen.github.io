@@ -6,8 +6,6 @@ async function loadCSV(url) {
 }
 
 
-
-// Function to process each table with colored headers
 const processModelTable = (data, tableId, headerClass) => {
     const table = document.getElementById(tableId);
     const tableHead = table.querySelector('thead');
@@ -41,12 +39,13 @@ const processModelTable = (data, tableId, headerClass) => {
 
         columns.forEach((col, index) => {
             const td = document.createElement('td');
+            const div = document.createElement('div'); // Wrap content in a div
 
             if (headers[index] === 'Open-Weight') {
                 const badge = document.createElement('span');
                 badge.className = col === "Yes" ? 'badge badge-yes' : 'badge badge-no text-dark';
                 badge.textContent = col || 'No';
-                td.appendChild(badge);
+                div.appendChild(badge);
             } else if (headers[index] === 'Link') {
                 if (col) {
                     const link = document.createElement('a');
@@ -54,20 +53,21 @@ const processModelTable = (data, tableId, headerClass) => {
                     link.target = '_blank';
                     link.className = 'btn btn-link';
                     link.textContent = 'Visit';
-                    td.appendChild(link);
+                    div.appendChild(link);
                 } else {
-                    td.textContent = 'N/A';
+                    div.textContent = 'N/A';
                 }
             } else {
-                td.textContent = col || 'N/A';
+                div.textContent = col || 'N/A';
             }
+
+            td.appendChild(div); // Add the div to td
             tr.appendChild(td);
         });
 
         tableBody.appendChild(tr);
     });
 };
-
 
 
 function calculateModelColumnWidth(modelNames) {
@@ -136,8 +136,13 @@ const processResultsTable = (data, tableId, headerClass) => {
     rows.slice(1).forEach(row => {
         const columns = row.split(',').map(col => col.trim());
         const tr = document.createElement('tr');
-        const min = 50; // Minimum value
-        const max = 100; // Replace 100 with your actual maximum if available
+        const minValues = {
+            'llm-res-table': 50,  // Example minimum for t2i-res-table
+            'vlm-res-table': 0, // Another example
+            't2i-res-table': 10         // Default min if table ID is not in the list
+        };
+        const min = minValues[tableId] || 0; // Default to 0 if tableId is not found
+        const max =  100; // Default max if tableId is not found
 
         columns.forEach((col, index) => {
             const td = document.createElement('td');
@@ -205,25 +210,27 @@ window.addEventListener('resize', handleResize);
 async function loadTableData() {
     try {
         // Load CSV data for each table
-        const [llmModels, lvmModels, t2iModels] = await Promise.all([
+        const [llmModels, vlmModels, t2iModels] = await Promise.all([
             loadCSV('assets/data/llm.csv'),
-            loadCSV('assets/data/lvm.csv'),
+            loadCSV('assets/data/vlm.csv'),
             loadCSV('assets/data/t2i.csv'),
 
         ]);
-        const [llmResults, lvmResults, t2iResults] = await Promise.all([
+        const [llmResults, vlmResults, t2iResults] = await Promise.all([
             loadCSV('assets/data/llm-res.csv'),
-            loadCSV('assets/data/lvm-res.csv'),
+            loadCSV('assets/data/vlm-res.csv'),
             loadCSV('assets/data/t2i-res.csv'),
         ]);
 
 
         // Process and render each table with the loaded data
         processModelTable(llmModels, 'llm-table', 'table-primary');
-        processModelTable(lvmModels, 'lvm-table', 'table-primary');
+        processModelTable(vlmModels, 'vlm-table', 'table-primary');
         processModelTable(t2iModels, 't2i-table', 'table-primary');
 
         processResultsTable(llmResults, 'llm-res-table', );
+        processResultsTable(vlmResults, 'vlm-res-table', );
+        processResultsTable(t2iResults, 't2i-res-table', );
 
     } catch (error) {
         console.error('Error loading table data:', error);
