@@ -881,7 +881,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
@@ -893,7 +893,12 @@ section,
 .hero h2 {
   margin: 0 0 10px 0;
   font-size: 40px;
-  font-weight: 700;
+
+
+    font-family: "Raleway";
+    font-weight: 600;
+    font-style: normal;
+
   /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
@@ -909,112 +914,6 @@ section,
   }
 }
 
-/*.row {*/
-/*  --bs-gutter-x: 0.3rem; !* 缩小水平间距 *!*/
-/*  --bs-gutter-y: 0.5rem;  !* 缩小垂直间距 *!*/
-/*  display: flex;*/
-/*  flex-wrap: wrap;*/
-/*  margin-top: calc(-1 * var(--bs-gutter-y));*/
-/*  margin-right: calc(-0.1 * var(--bs-gutter-x));*/
-/*  margin-left: calc(-0.1 * var(--bs-gutter-x));*/
-/*}*/
-
-#background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 保证视频充满整个容器并裁剪溢出的部分 */
-  z-index: 2;       /* 让视频在内容的后面 */
-  background-color: black; /* 设置为黑色，以便白色被隐藏 */
-  mix-blend-mode: multiply; /* 将白色隐藏 */
-  /*transition: transform 2s ease-in-out, opacity 2s ease; !* 添加缩小和淡出效果的过渡 *!*/
-}
-
-
-.shrink {
-
-  transform: scale(0.05) translate(-10%, -10%); /* 缩小并向左上角移动 */
-  transform-origin: top left; /* 将元素的原点设置在左上角 */
-  opacity: 0; /* 透明度逐渐变为0 */
-  transition: transform 2.5s ease, opacity 1.5s ease; /* 动画同步进行，持续0.5秒 */
-}
-
-
-#title-container{
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-#logo-img{
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.img-background-container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-  z-index: -1;
-}
-
-.img-background {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: None;
-  transition: background-image 1s ease-in-out; /* 添加过渡效果 */
-  background-size: cover;
-  background-position: center center;
-}
-.img-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
-  z-index: -1;
-}
-
-.container-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 6vh;
-}
-
-.title-text{
-
-  font-size: 48px;
-  font-weight: 700;
-  color: color-mix(in srgb, #FFFFFF, transparent 5%);
-  text-align: center;
-  border-right: 2px solid gray;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.5s step-end infinite;
-  height: 4rem;
-}
-
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: gray;
-  }
-}
 
 .hero h2 .underlight {
   position: relative;
@@ -1044,10 +943,151 @@ section,
 }
 
 .hero p {
+  font-family: "IM Fell Double Pica";
+  font-weight: normal;
+  font-style: oblique;
   color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   margin-bottom: 30px;
   font-size: 32px;
   z-index: 1;
+}
+
+
+/*.row {*/
+/*  --bs-gutter-x: 0.3rem; !* 缩小水平间距 *!*/
+/*  --bs-gutter-y: 0.5rem;  !* 缩小垂直间距 *!*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  margin-top: calc(-1 * var(--bs-gutter-y));*/
+/*  margin-right: calc(-0.1 * var(--bs-gutter-x));*/
+/*  margin-left: calc(-0.1 * var(--bs-gutter-x));*/
+/*}*/
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 视频宽度设置为视口宽度 */
+  height: 100vh; /* 视频高度设置为视口高度 */
+  object-fit: cover; /* 保证视频充满整个容器并裁剪溢出的部分 */
+  z-index: -1; /* 将视频置于其他内容之后 */
+  mix-blend-mode: multiply; /* 将白色隐藏 */
+  transition: transform 2s ease-in-out, opacity 2s ease; /* 添加缩小和淡出效果的过渡 */
+}
+
+.shrink {
+
+  transform: scale(0.05) translate(-10%, -10%); /* 缩小并向左上角移动 */
+  opacity: 0; /* 透明度逐渐变为0 */
+  transition: transform 1.0s ease-in-out, opacity 1.5s ease-in-out; /* 动画同步进行，持续0.5秒 */
+}
+
+
+#title-container{
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#logo-img{
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.title-text{
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 48px;
+  color: color-mix(in srgb, #AAAAAA, transparent 100%);
+  text-align: center;
+  border-right: 2px solid gray;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.5s step-end infinite;
+  height: 6rem;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: gray;
+  }
+}
+
+
+
+
+.img-background-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: -1;
+}
+
+
+.img-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: None;
+  transition: background-image 1s ease-in-out; /* 添加过渡效果 */
+  background-size: cover;
+  background-position: center center;
+}
+.img-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
+  backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
+  z-index: 0;
+}
+
+.container-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.title-text{
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 58px;
+
+  color: color-mix(in srgb, #FFFFFF, transparent 5%);
+  text-align: center;
+  border-right: 2px solid gray;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.5s step-end infinite;
+  height: 6rem;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: gray;
+  }
 }
 
 
