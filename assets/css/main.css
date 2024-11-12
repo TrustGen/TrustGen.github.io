@@ -894,8 +894,6 @@ section,
   margin: 0 0 10px 0;
   font-size: 40px;
   font-weight: 700;
-
-
   /*background: linear-gradient(210deg,  #37c868 50%, #e2d9c3 24.26%);*/
   /*background: linear-gradient(180deg, #FFFF8D 0%, #B2FF59 100%);*/
   /*background: linear-gradient(180deg, #FFB6C1 0%, #FFD700 100%);*/
@@ -931,16 +929,27 @@ section,
   z-index: 2;       /* 让视频在内容的后面 */
   background-color: black; /* 设置为黑色，以便白色被隐藏 */
   mix-blend-mode: multiply; /* 将白色隐藏 */
-  transition: transform 2s ease-in-out, opacity 2s ease; /* 添加缩小和淡出效果的过渡 */
+  /*transition: transform 2s ease-in-out, opacity 2s ease; !* 添加缩小和淡出效果的过渡 *!*/
 }
 
 
 .shrink {
-  transform: scale(0.2) translateY(-70%); /* 缩小至80%并向上移动20% */
-  opacity: 0.8; /* 透明度逐渐变为0 */
+
+  transform: scale(0.05) translate(-10%, -10%); /* 缩小并向左上角移动 */
+  transform-origin: top left; /* 将元素的原点设置在左上角 */
+  opacity: 0; /* 透明度逐渐变为0 */
+  transition: transform 2.5s ease, opacity 1.5s ease; /* 动画同步进行，持续0.5秒 */
 }
 
 
+#title-container{
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#logo-img{
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
 .img-background-container{
   position: absolute;
@@ -975,6 +984,37 @@ section,
   z-index: -1;
 }
 
+.container-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+}
+
+.title-text{
+
+  font-size: 48px;
+  font-weight: 700;
+  color: color-mix(in srgb, #FFFFFF, transparent 5%);
+  text-align: center;
+  border-right: 2px solid gray;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.5s step-end infinite;
+  height: 4rem;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: gray;
+  }
+}
 
 .hero h2 .underlight {
   position: relative;
