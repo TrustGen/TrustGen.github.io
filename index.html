@@ -56,25 +56,28 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#dimensions">Dimensions</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#discussion">Discussion</a></li>
+          <li><a href="https://trustgen.github.io/trustgen_docs/">Documents</a></li>
+<!--          <li><a href="#team">Team</a></li>-->
+<!--          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
+<!--            <ul>-->
+<!--              <li><a href="#discussion">Discussion</a></li>-->
+<!--&lt;!&ndash;              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <li><a href="#">Deep Dropdown 1</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <li><a href="#">Deep Dropdown 2</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <li><a href="#">Deep Dropdown 3</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <li><a href="#">Deep Dropdown 4</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <li><a href="#">Deep Dropdown 5</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;              </li>&ndash;&gt;-->
+<!--              <li><a href="#">Dropdown 2</a></li>-->
+<!--              <li><a href="#">Dropdown 3</a></li>-->
+<!--              <li><a href="#">Dropdown 4</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -383,7 +386,7 @@
     </section><!-- /Services Section -->
 
 
-    <section id="Models" class="models section">
+    <section id="models" class="models section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -440,8 +443,21 @@
             </table>
           </div>
         </div>
+
+      </div>
+      </div>
+    </section>
+          <section id="leaderboard" class="leaderboard section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Leaderboard</h2>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up">
+          <div class="row gy-4" >
           <div class="container mt-5">
-            <h4>LLM Results</h4>
+            <h4>Large Language Model Results</h4>
             <div class="rounded-4 border border-light overflow-hidden">
               <table class=" table table-hover mb-0 data-table table-green" id="llm-res-table">
                 <thead>
@@ -452,7 +468,7 @@
             </div>
           </div>
           <div class="container mt-5">
-            <h4>VLM Results</h4>
+            <h4>Vision Language Model Results</h4>
             <div class="rounded-4 border border-light overflow-hidden">
               <table class=" table table-hover mb-0 data-table table-orange" id="vlm-res-table">
                 <thead>
@@ -463,7 +479,7 @@
             </div>
           </div>
           <div class="container mt-5">
-            <h4>T2I Results</h4>
+            <h4>Text-to-Image Results</h4>
             <div class="rounded-4 border border-light overflow-hidden">
               <table class=" table table-hover mb-0 data-table table-blue" id="t2i-res-table">
                 <thead>
@@ -473,10 +489,9 @@
               </table>
             </div>
           </div>
-      </div>
-      </div>
+          </div>
+          </div>
     </section>
-
         <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
 
@@ -501,8 +516,8 @@
     
     <!-- Pricing Section -->
     
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
+    <!-- discussion Section -->
+    <section id="discussion" class="discussion section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -515,76 +530,76 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="faq-container">
+            <div class="discussion-container">
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Trustworthiness is Subject to Dynamic Changes</h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>Trustworthiness in generative models is increasingly viewed as a dynamic, context-dependent quality that must be adapted to the unique demands and ethical considerations of various applications. In educational settings, for instance, models must prioritize the exclusion of harmful content, aligning with strict standards to protect young audiences. Conversely, in creative, medical, or research domains, the trustworthiness of a model may depend on its capacity for creative freedom or the inclusion of graphic content, challenging the model's adaptability to diverse expectations. Two main approaches address this dynamic trustworthiness: using highly specialized models for specific tasks or designing models capable of context-sensitive adaptations. The latter approach emphasizes adaptive and context-aware governance but raises challenges in model alignment and contextual interpretation. To assess these models accurately, a shift from static evaluation metrics to more fluid, adaptable frameworks is needed, recognizing the varying requirements of different stakeholders.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Trustworthiness Enhancement Should Not Be Predicated On A Loss of Utility</h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>As generative models evolve, balancing trustworthiness with utility has become a critical concern. The California AI Bill (SB 1047), aimed at ensuring model trustworthiness, has sparked debate over whether stringent safeguards might stifle innovation. Research reveals that trustworthiness and utility are closely linked, with models often requiring both to be effective. Prioritizing trustworthiness excessively can limit utility, making models overly restrictive, while focusing solely on utility can lead to issues like bias and ethical risks. Thus, a sustainable approach requires enhancing both aspects in tandem. Approaches like the "harmlessness-first" strategy, which establishes a foundation of trustworthiness before optimizing for utility, exemplify how both dimensions can reinforce each other. This balanced framework aims to produce models that are both reliable and useful across diverse applications, avoiding the pitfalls of sacrificing one for the other.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Reassessing Ambiguities in the Safety of Attacks and Defenses</h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>The difficulty in distinguishing harmful from benign content in generative models creates significant challenges for implementing effective safety mechanisms. Ambiguities in assessing both input and output complicate ethical and practical considerations. For instance, seemingly harmless inputs may subtly encourage harmful outputs, and outputs that include moral disclaimers can still be misused if altered. These ambiguities underscore the need for clearer, more precise definitions and standards for safety in generative models. As these models evolve, addressing such complexities will be vital to their safe and ethical use across different applications.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
             </div>
 
-          </div><!-- End Faq Column-->
+          </div><!-- End discussion Column-->
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="faq-container">
+            <div class="discussion-container">
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Interdisciplinary Collaboration is Essential to Ensure Trustworthiness </h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>Interdisciplinary collaboration with generative models fosters a mutually beneficial relationship: by integrating insights from fields such as ethics, psychology, and domain-specific expertise, we gain a comprehensive understanding of model trustworthiness, robustness, and reliability. This diverse input not only informs the development of safer and more ethical generative models but also enhances the disciplines involved by enabling trustworthy models to advance research, improve decision-making, and support autonomous systems. This synergy promotes a continuous cycle of innovation, driving progress in both the models themselves and across the broader scientific and technological landscape.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Balancing Adaptability and Consistent Safety Protocols to Eliminate Jailbreak</h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>To address the vulnerabilities in generative models posed by jailbreak attacks, there is a need for robust safety protocols that ensure consistency across varying inputs. Jailbreaks exploit models' adaptability, using rephrasing and contextual shifts to bypass safety measures. Traditional safety training methods, like fine-tuning or RLHF for safety, focus on specific harmful inputs but are insufficient for handling the vast potential rephrasings that could still produce harmful outputs. A proposed solution is a "multi-level consistency supervision mechanism," which involves training models to generate safe responses for semantically similar queries, regardless of rephrasing, adding a context-sensitive detection module to monitor intent shifts in conversations, and applying post-output defenses to verify adherence to safety protocols in real-time. This comprehensive approach reduces the reliance on input-based safety, strengthens security across diverse contexts, and provides dynamic policy adaptation to maintain safety without compromising the model's utility for various user needs.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
-              <div class="faq-item">
+              <div class="discussion-item">
                 <h3>Trustworthiness in AI for Science</h3>
-                <div class="faq-content">
+                <div class="discussion-content">
                   <p>Generative models in scientific fields like chemistry, biology, and materials science present unique trustworthiness challenges due to the critical need for precision, safety, and ethical compliance. While these models can accelerate discovery, they also risk generating harmful outputs, requiring a balance between innovation and caution. Trust in model outputs relies on transparency, validation, and clear uncertainty measures; human oversight remains essential to assess AI predictions critically. Responsible deployment frameworks, phased testing, ethical constraints, and experimental validation help ensure reliability and safety. This collaborative human-AI approach supports rapid scientific progress while upholding essential standards for safe and ethical application.</p>
                 </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div><!-- End discussion item-->
 
             </div>
 
-          </div><!-- End Faq Column-->
+          </div><!-- End discussion Column-->
 
         </div>
 
       </div>
 
-    </section><!-- /Faq Section -->
+    </section><!-- /discussion Section -->
 
     <!-- Clients Section -->
-    <section id="clients" class="clients section">
+    <section id="team" class="team section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Team</h2>

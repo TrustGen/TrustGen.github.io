@@ -1557,20 +1557,20 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Faq Section
+# discussion Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
+.discussion .discussion-container .discussion-item {
   position: relative;
   padding: 20px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item:last-child {
+.discussion .discussion-container .discussion-item:last-child {
   margin-bottom: 0;
 }
 
-.faq .faq-container .faq-item h3 {
+.discussion .discussion-container .discussion-item h3 {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -1581,16 +1581,16 @@ section,
   align-items: center;
 }
 
-.faq .faq-container .faq-item h3 .num {
+.discussion .discussion-container .discussion-item h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
 
-.faq .faq-container .faq-item h3:hover {
+.discussion .discussion-container .discussion-item h3:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-item .faq-content {
+.discussion .discussion-container .discussion-item .discussion-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
@@ -1598,12 +1598,12 @@ section,
   opacity: 0;
 }
 
-.faq .faq-container .faq-item .faq-content p {
+.discussion .discussion-container .discussion-item .discussion-content p {
   margin-bottom: 0;
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item .faq-toggle {
+.discussion .discussion-container .discussion-item .discussion-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1613,22 +1613,22 @@ section,
   cursor: pointer;
 }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
+.discussion .discussion-container .discussion-item .discussion-toggle:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active h3 {
+.discussion .discussion-container .discussion-active h3 {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active .faq-content {
+.discussion .discussion-container .discussion-active .discussion-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
 
-.faq .faq-container .faq-active .faq-toggle {
+.discussion .discussion-container .discussion-active .discussion-toggle {
   transform: rotate(90deg);
   color: var(--accent-color);
 }
