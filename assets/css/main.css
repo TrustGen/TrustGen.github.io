@@ -1002,7 +1002,7 @@ section,
   color: color-mix(in srgb, #AAAAAA, transparent 100%);
   text-align: center;
   border-right: 2px solid gray;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   animation: blink 0.5s step-end infinite;
   height: 6rem;

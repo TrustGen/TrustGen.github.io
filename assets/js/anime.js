@@ -39,7 +39,7 @@ function delay(ms) {
 async function typeText(message) {
     for (let i = 0; i <= message.length; i++) {
         textElement.innerHTML = message.slice(0, i);
-        await delay(100); // 打字速度控制
+        await delay(150); // 打字速度控制
     }
 }
 
