@@ -1,7 +1,7 @@
 
 // script.js
 const images = [
-    'assets/img/background/background_1.jpg',
+    // 'assets/img/background/background_1.jpg',
     'assets/img/background/18.jpg',
     // 'assets/img/background/30.jpg',
     'assets/img/background/37.jpg'
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 0);
 
         // 背景淡入完成后再显示文字容器
-        setTimeout(() => {
+        setTimeout(() => {d
             textContainer.style.opacity = 1;
             textContainer.style.transform = "translateY(0)";
         }, 1000); // 延迟文字显示，确保背景淡入完成
