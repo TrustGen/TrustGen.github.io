@@ -920,19 +920,48 @@ section,
 /*  margin-right: calc(-0.1 * var(--bs-gutter-x));*/
 /*  margin-left: calc(-0.1 * var(--bs-gutter-x));*/
 /*}*/
-.img-background {
+
+#background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('assets/img/background/background_1.jpg');
+  object-fit: cover; /* 保证视频充满整个容器并裁剪溢出的部分 */
+  z-index: 2;       /* 让视频在内容的后面 */
+  background-color: black; /* 设置为黑色，以便白色被隐藏 */
+  mix-blend-mode: multiply; /* 将白色隐藏 */
+  transition: transform 2s ease-in-out, opacity 2s ease; /* 添加缩小和淡出效果的过渡 */
+}
+
+
+.shrink {
+  transform: scale(0.2) translateY(-70%); /* 缩小至80%并向上移动20% */
+  opacity: 0.8; /* 透明度逐渐变为0 */
+}
+
+
+
+.img-background-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: -1;
+}
+
+.img-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: None;
   transition: background-image 1s ease-in-out; /* 添加过渡效果 */
   background-size: cover;
   background-position: center center;
-
-  z-index: -1
-  ; /* 确保背景在内容之下 */
 }
 .img-background::before {
   content: "";
@@ -945,6 +974,7 @@ section,
   backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: -1;
 }
+
 
 .hero h2 .underlight {
   position: relative;
@@ -2089,3 +2119,4 @@ data-table {
   pointer-events: none; /* Prevent the bar from interfering with text selection */
   transition: width 0.3s ease; /* Smooth transition when width changes */
 }
+

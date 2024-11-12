@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+
 
   <!-- =======================================================
   * Template Name: Anyar
@@ -97,10 +99,17 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <div class="img-background" id="background"></div>
+      <div class="img-background-container"> <!-- 使用 class 而不是 id -->
+        <div class="img-background" id="background"></div>
+      </div>
+      <video autoplay muted  playsinline id="background-video">
+        <source src="assets/img/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
+
             <!-- <img src="assets/img/header-logo.png" class="img-fluid custom-padding" alt="" style="width: 60%;"> -->
             <h2><span>On the </span>Trustworthiness <span>of Generative Foundational Models</span></h2>
             <p>Guideline, Benchmark, and Perspective</p>
@@ -113,6 +122,9 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
+
+
+
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -726,6 +738,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/table.js"></script>
+  <script src="assets/js/anime.js"></script>
+  <script src="anime.min.js"></script>
 
 
 </body>
