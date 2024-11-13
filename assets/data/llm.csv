@@ -9,8 +9,8 @@ Gemini-1.5-Flash,N/A,No,002,Google,Gemini API,https://blog.google/technology/ai/
 Gemma-2-27B,27B,Yes,it,Google,Deepinfra API,https://blog.google/technology/developers/google-gemma-2/
 Llama-3.1-70B,70B,Yes,instruct,Meta,Deepinfra API,https://ai.meta.com/blog/meta-llama-3-1/
 Llama-3.1-8B,8B,Yes,instruct,Meta,Deepinfra API,https://ai.meta.com/blog/meta-llama-3-1/
-Mixtral-8*22B,8*22B,Yes,instruct-v0.1,Mistral,Deepinfra API,https://mistral.ai/news/mixtral-8x22b/
-Mixtral-8*7B,8*7B,Yes,instruct-v0.1,Mistral,Deepinfra API,https://mistral.ai/news/mixtral-of-experts/
+Mixtral-8x22B,8x22B,Yes,instruct-v0.1,Mistral,Deepinfra API,https://mistral.ai/news/mixtral-8x22b/
+Mixtral-8x7B,8x7B,Yes,instruct-v0.1,Mistral,Deepinfra API,https://mistral.ai/news/mixtral-of-experts/
 GLM-4-Plus,N/A,Yes,N/A,ZHIPU AI,Zhipu API,https://bigmodel.cn/dev/howuse/glm-4
 Qwen2.5-72B,72B,Yes,instruct,Qwen,Deepinfra API,https://qwenlm.github.io/zh/blog/qwen2.5-llm/
 Deepseek,236B,Yes,v2.5,Deepseek,Deepseek API,https://www.deepseek.com/
