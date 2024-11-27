@@ -25,42 +25,41 @@ document.addEventListener("DOMContentLoaded", () => {
 setInterval(changeBackground, changeInterval); // 每隔几秒切换背景
 
 
-
-
-const textElement = document.querySelector('.title-text');
-const messages = [ 'Trustworthy Generative Models','TrustGen',];
-
-// 延时函数
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-// 打印逐字动画
-async function typeText(message) {
-    for (let i = 0; i <= message.length; i++) {
-        textElement.innerHTML = message.slice(0, i);
-        await delay(150); // 打字速度控制
-    }
-}
-
-// 删除逐字动画
-async function deleteText(message) {
-    for (let i = message.length; i >= 0; i--) {
-        textElement.innerHTML = message.slice(0, i);
-        await delay(100); // 删除速度控制
-    }
-}
-
-// 循环打印和删除
-async function startTypingAnimation() {
-    while (true) {
-        for (const message of messages) {
-            await typeText(message);
-            await delay(1000); // 停留时间
-            await deleteText(message);
-        }
-    }
-}
+//
+//
+// const textElement = document.querySelector('.title-text');
+// const messages = ['TrustGen',];
+//
+// // 延时函数
+// function delay(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
+//
+// // 打印逐字动画
+// async function typeText(message) {
+//     for (let i = 0; i <= message.length; i++) {
+//         textElement.innerHTML = message.slice(0, i);
+//         await delay(150); // 打字速度控制
+//     }
+// }
+//
+// // 删除逐字动画
+// async function deleteText(message) {
+//     for (let i = message.length; i >= 0; i--) {
+//         textElement.innerHTML = message.slice(0, i);
+//         await delay(100); // 删除速度控制
+//     }
+// }
+//
+// // 循环打印和删除
+// async function startTypingAnimation() {
+//     for (const message of messages) {
+//         await typeText(message);
+//     }
+//     while (true) {
+//
+//     }
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     const logoImg = document.getElementById("logo-img"); // 参考的目标元素
@@ -98,6 +97,8 @@ function triggerShrinkAnimation(element) {
     element.style.transform = "scale(0.05) translate(-10%, -10%)"; // 缩小并向左上角移动
     element.style.opacity = "0"; // 渐隐
 }
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
