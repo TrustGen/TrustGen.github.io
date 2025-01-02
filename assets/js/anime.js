@@ -2,8 +2,9 @@
 // script.js
 const images = [
     // 'assets/img/background/background_1.jpg',
-    'assets/img/background/37.jpg',
-    'assets/img/background/18.jpg',
+    // 'assets/img/background/37.jpg',
+    // 'assets/img/background/18.jpg',
+    'assets/img/background/background-4.webp',
     // 'assets/img/background/30.jpg',
 
 ];
