@@ -28,6 +28,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -48,7 +49,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename"></h1>
@@ -113,9 +114,9 @@
       <div class="container" id="title-container">
         <div class="row justify-content-center">
           <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-12  container-type">
-              <div class="title-text"></div>
-            </div>
+            <!-- <div class="col-12  container-type">
+              <div class="title-text">TrustGen</div>
+            </div> -->
             <!-- <img src="assets/img/header-logo.png" class="img-fluid custom-padding" alt="" style="width: 60%;"> -->
             <h2><span>On the </span>Trustworthiness <span>of Generative Foundational Models</span></h2>
             <p>Guideline, Benchmark, and Perspective</p>
@@ -147,7 +148,9 @@
           – Stephen R. Covey
         </p>
         <br>
-
+        <div style="height: 20px"></div>
+        <img src="assets/img/milestone.png" class="img-fluid" alt="" >
+        <div style="height: 20px"></div>
 
         <div class="row gy-10 my-5">
         <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
@@ -156,6 +159,7 @@
             In this paper, we first establish a standardized set of guidelines that provide a consistent, cross-disciplinary foundation for defining and assessing the trustworthiness of GenFMs. Then, recognizing that current benchmarks focus narrowly on specific model categories and lack a dynamic nature, we introduce TrustGen, a comprehensive and adaptive benchmark for evaluating GenFMs across multiple dimensions of trustworthiness. Finally, we provide an in-depth discussion on the topic of trustworthy GenFMs, covering key aspects such as the fundamental nature of trustworthiness, evaluation methodologies, the role of interdisciplinary collaboration, societal and downstream implications, as well as trustworthiness-related technical approaches
           </p>
           <img src="assets/img/intro.png" class="img-fluid" alt="" >
+          
 <!--          <a href="#" class="about-btn align-self-center align-self-xl-middle"><span>About us</span> <i class="bi bi-chevron-right"></i></a>-->
 
 
@@ -164,21 +168,27 @@
       <div class="row gy-4 my-4" data-aos="fade-up" data-aos-delay="200">
         <div class="col-md-4 icon-box position-relative">
           <img src="assets/img/compliant.png" alt="guideline icon" style="width: 15%;">
-          <h4>Comprehensive Identification and Establishment of Guidelines for Trustworthy Generative Models.</h4>
+          <h4>Thrust 1:  A Standardized Set of Guidelines for Trustworthy GenFMs</h4>
           <p>
-            We collaborated across disciplines—including NLP, Computer Vision, HCI, Security, and Data Mining—to define trustworthiness in generative models by integrating diverse insights. And we developed guidelines focusing on legal compliance, ethical responsibility, risk management, user-centered design, and sustainability.
+          <ul style="list-style-type: square;">
+            <li><i class="fas fa-check-circle"></i>GenFMs' societal impact demands deeper trust analysis.</li>
+            <li><i class="fas fa-star"></i>Addressing key challenges guides ethical and aligned advancements.</li>
+        </ul>
           </p>
+
         </div><!-- Icon-Box -->
 
         <div class="col-md-4 icon-box position-relative">
           <img src="assets/img/framework-1.png" alt="framework icon" style="width: 14%;">
-          <h4>Holistic and Dynamic Evaluation Framework for Generative Foundation Models.</h4>
-          <p>We present TrustGen, a dynamic benchmark for assessing generative model trustworthiness across diverse types, including text-to-image, language, and vision-language models. Unlike static benchmarks, TrustGen evaluates critical dimensions such as truthfulness, safety, fairness, privacy, robustness, machine ethics, and AI risk. Its modular design adapts to evolving model capabilities, reducing data contamination risks and enhancing evaluation accuracy.</p>
+          <h4>Thrust 2: Dynamic Evaluation on Trustworthiness of GenFMs</h4>
+          <p>Static evaluations cannot keep pace with evolving GenFMs.
+            Dynamic frameworks ensure continuous and adaptable trust assessment.
+          </p>
         </div><!-- Icon-Box -->
 
         <div class="col-md-4 icon-box position-relative">
           <img src="assets/img/research.png" alt="analysis icon" style="width: 14%;">
-          <h4>Strategic In-Depth Analysis of Challenges and Future Directions.</h4>
+          <h4>Thrust 3: In-depth Discussion on Challenges and Future Research</h4>
           <p>We conduct an extensive, forward-looking discussion on the critical issues surrounding the trustworthiness of generative models. We explore the key challenges in defining and evaluating the trustworthiness of generative models, addressing trade-offs between performance and trust-driven impact. Focusing on safety, fairness, and ethics, we outline persistent issues and offer a roadmap for advancing trustworthy generative AI research.</p>
         </div><!-- Icon-Box -->
       </div>
@@ -333,67 +343,67 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-7 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/Truthful.png" alt="Truthfulness Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/Truthful.png" alt="Truthfulness Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Truthfulness</h4>
               <p class="description">refers to the ability to provide accurate, factual, and unbiased information while avoiding hallucinations, sycophancy, and deceptive outputs.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div>
           <!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/Safety.png" alt="Safety Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/Safety.png" alt="Safety Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Safety</h4>
               <p class="description">refers to resilience against adversarial attacks, prevention of harmful or toxic outputs, and robustness in maintaining intended functionality even when faced with attempts to manipulate or bypass their safeguards.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/fairness.png" alt="Fairness Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/fairness.png" alt="Fairness Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Fairness</h4>
               <p class="description">refers to the ability to provide unbiased outputs by avoiding stereotypes, disparagement, and preferential treatment across different groups and viewpoints.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/privacy.png" alt="Privacy Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/privacy.png" alt="Privacy Icon" class="section-icon"></div>
 
             <div>
               <h4 class="title">Privacy</h4>
               <p class="description">refers to the ability to protect sensitive information and prevent unauthorized data extraction, ensuring compliance with privacy standards while resisting privacy attacks such as data extraction and membership inference.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/robust.png" alt="Robustness Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/robust.png" alt="Robustness Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Robustness</h4>
               <p class="description">refers to the ability to accurately and stably output the input when it receives perturbations.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/Ethics.png" alt="Machine Ethics Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/Ethics.png" alt="Machine Ethics Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Machine Ethics</h4>
               <p class="description">is the field focused on embedding ethical principles into autonomous AI systems, enabling them to make decisions that align with moral reasoning and societal values independently.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0 p-3"><img src="assets/img/icons/risk-1.png" alt="Advanced AI Risk Icon" class="section-icon"></div>
+            <div class="icon flex-shrink-0 p-2"><img src="assets/img/icons/risk-1.png" alt="Advanced AI Risk Icon" class="section-icon"></div>
             <div>
               <h4 class="title">Advanced AI Risk</h4>
               <p class="description">refers to the potential for autonomous AI systems to pursue goals that conflict with human well-being, raising concerns about uncontrollable scenarios and the need for alignment with ethical and safety standards to protect society.</p>
-              <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+                          <!-- <a href="" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -550,6 +560,7 @@
 
             <div class="discussion-container">
 
+              <!-- 10.1 -->
               <div class="discussion-item">
                 <h3>Trustworthiness is Subject to Dynamic Changes</h3>
                 <div class="discussion-content">
@@ -558,6 +569,7 @@
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.2 -->
               <div class="discussion-item">
                 <h3>Trustworthiness Enhancement Should Not Be Predicated On A Loss of Utility</h3>
                 <div class="discussion-content">
@@ -566,6 +578,7 @@
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.3 -->
               <div class="discussion-item">
                 <h3>Reassessing Ambiguities in the Safety of Attacks and Defenses</h3>
                 <div class="discussion-content">
@@ -574,14 +587,16 @@
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.4 -->
               <div class="discussion-item">
-                <h3>Fair Evaluation: The Perspective of Developers and Attackers</h3>
+                <h3>Dual Perspectives on Fair Evaluation: Developers and Attackers</h3>
                 <div class="discussion-content">
                   <p>To evaluate the generative models, it is imperative to address a pivotal yet often overlooked issue: should the evaluation be framed from the standpoint of developers or attackers? From a developer’s perspective, evaluations prioritize the model’s ethical adherence and its capacity to block harmful interactions entirely, emphasizing moral responsibility and safety. In contrast, attackers assess a model based on its susceptibility to manipulation, where even incorrect or non-responses are deemed failures. Advocating for the developer's perspective in evaluations promotes trustworthiness, focusing on the model's ability to resist exploitation rather than just delivering accurate answers under ideal conditions, thus addressing real-world security challenges.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.5 -->
               <div class="discussion-item">
                 <h3>A Need for Extendable Evaluation in Complex Generative Systems</h3>
                 <div class="discussion-content">
@@ -590,18 +605,48 @@
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.6 -->
               <div class="discussion-item">
-                <h3>Integrated Protection of Model Alignment and External Security </h3>
+                <h3>Integrated Protection of Model Alignment and External Security</h3>
                 <div class="discussion-content">
                   <p>Our work highlight the importance of combining internal alignment mechanisms with external safety protections to enhance the trustworthiness of generative models, particularly large language and vision models. Internal alignment faces limitations, such as inherent flaws in current alignment methods and reduced model utility when safety is overly prioritized. Meanwhile, external protections, like moderators and classifiers, offer additional layers of security by identifying harmful content and adapting to dynamic scenarios without compromising the model’s core functionality. This integrated approach promises a safer, more adaptable framework for deploying generative models across diverse applications.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.7 -->
               <div class="discussion-item">
-                <h3>Interdisciplinary Collaboration is Essential to Ensure Trustworthiness </h3>
+                <h3>Interdisciplinary Collaboration is Essential to Ensure Trustworthiness</h3>
                 <div class="discussion-content">
                   <p>Interdisciplinary collaboration with generative models fosters a mutually beneficial relationship: by integrating insights from fields such as ethics, psychology, and domain-specific expertise, we gain a comprehensive understanding of model trustworthiness, robustness, and reliability. This diverse input not only informs the development of safer and more ethical generative models but also enhances the disciplines involved by enabling trustworthy models to advance research, improve decision-making, and support autonomous systems. This synergy promotes a continuous cycle of innovation, driving progress in both the models themselves and across the broader scientific and technological landscape.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.8 -->
+              <div class="discussion-item">
+                <h3>When Generative Models Meets Ethical Dilemma</h3>
+                <div class="discussion-content">
+                  <p>The integration of generative models in decision-making highlights ethical complexities, as models exhibit varied responses to moral dilemmas. While some models remain neutral, others prioritize utilitarian outcomes or display biases, such as favoring pedestrian safety or emotionally influenced decisions. This diversity reveals the lack of a unified ethical framework, emphasizing the need for interdisciplinary research and transparency tools. Future efforts should focus on aligning models with societal values, especially for applications in sensitive domains like healthcare and law enforcement.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.9 -->
+              <div class="discussion-item">
+                <h3>Broad Impacts of Trustworthiness: From Individuals to Society and Beyond</h3>
+                <div class="discussion-content">
+                  <p>The trustworthiness of generative models has significant individual and societal impacts. On a personal level, these models affect privacy, decision-making, and mental health, with biased outputs perpetuating stereotypes and privacy risks. Societally, they amplify misinformation, economic disruption, and systemic inequality, reinforcing biases and undermining trust in media. Additionally, their high resource demands strain the environment. Ensuring fairness, transparency, and accountability in these models is essential to harness their benefits while minimizing risks.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.10 -->
+              <div class="discussion-item">
+                <h3>Alignment: A Double-Edged Sword? Investigating Untrustworthy Behaviors Resulting from
+Instruction Tuning</h3>
+                <div class="discussion-content">
+                  <p>A significant distinction of advanced LLMs is their enhanced ability to follow human instructions, achieved through alignment techniques such as PPO and RLHF. While alignment embeds human values to improve helpfulness and safety, it can also lead to unintended issues, including sycophantic responses, deceptive alignment, overoptimization, and power-seeking behaviors. Mechanistic interpretability offers a promising approach to understanding these behaviors by clarifying model inner workings. Future research should aim to refine alignment methods and develop strategies to mitigate these unintended consequences, enhancing the trustworthiness of large models.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
@@ -613,62 +658,88 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
 
             <div class="discussion-container">
-              <div class="discussion-item">
-                <h3>When Generative Models Meets Ethical Dilemma</h3>
-                <div class="discussion-content">
-                  <p>The integration of generative models in decision-making highlights ethical complexities, as models exhibit varied responses to moral dilemmas. While some models remain neutral, others prioritize utilitarian outcomes or display biases, such as favoring pedestrian safety or emotionally influenced decisions. This diversity reveals the lack of a unified ethical framework, emphasizing the need for interdisciplinary research and transparency tools. Future efforts should focus on aligning models with societal values, especially for applications in sensitive domains like healthcare and law enforcement.</p>
-                </div>
-                <i class="discussion-toggle bi bi-chevron-right"></i>
-              </div>
 
+              <!-- 10.11 -->
               <div class="discussion-item">
-                <h3>Broad Impacts of Trustworthiness: From Individuals to Society and Beyond</h3>
-                <div class="discussion-content">
-                  <p>The trustworthiness of generative models has significant individual and societal impacts. On a personal level, these models affect privacy, decision-making, and mental health, with biased outputs perpetuating stereotypes and privacy risks. Societally, they amplify misinformation, economic disruption, and systemic inequality, reinforcing biases and undermining trust in media. Additionally, their high resource demands strain the environment. Ensuring fairness, transparency, and accountability in these models is essential to harness their benefits while minimizing risks.</p>
-                </div>
-                <i class="discussion-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="discussion-item">
-                <h3>Alignment: A Double-Edged Sword? Investigating Untrustworthy Behaviors Resulting from Instruction Tuning </h3>
-                <div class="discussion-content">
-                  <p>A significant distinction of advanced LLMs is their enhanced ability to follow human instructions, achieved through alignment techniques such as PPO and RLHF. While alignment embeds human values to improve helpfulness and safety, it can also lead to unintended issues, including sycophantic responses, deceptive alignment, overoptimization, and power-seeking behaviors. Mechanistic interpretability offers a promising approach to understanding these behaviors by clarifying model inner workings. Future research should aim to refine alignment methods and develop strategies to mitigate these unintended consequences, enhancing the trustworthiness of large models.</p>
-                </div>
-                <i class="discussion-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="discussion-item">
-                <h3>Lessons on Fair Generative Foundation Models</h3>
+                <h3>Lessons Learned in Ensuring Fairness of Generative Foundation Models</h3>
                 <div class="discussion-content">
                   <p>Fairness in generative models is complex and context-dependent, requiring adaptations to different groups' needs rather than a one-size-fits-all approach. True fairness goes beyond equal treatment, fostering cross-group understanding and empowering users with unbiased information rather than dictating choices. Fairness must be assessed in both the model's development and its outputs to ensure equitable results. Social disparities complicate fairness further, as strict equality can perpetuate inequity; thus, nuanced adjustments may be necessary. Additionally, models must handle factual statements carefully to avoid subtle disparagement, presenting data in ways that do not reinforce harmful stereotypes.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.12 -->
               <div class="discussion-item">
-                <h3>Balancing Adaptability and Consistent Safety Protocols to Eliminate Jailbreak</h3>
+                <h3>Balancing Dynamic Adaptability and Consistent Safety Protocols in LLMs to Eliminate
+Jailbreak Attacks</h3>
                 <div class="discussion-content">
                   <p>To address the vulnerabilities in generative models posed by jailbreak attacks, there is a need for robust safety protocols that ensure consistency across varying inputs. Jailbreaks exploit models' adaptability, using rephrasing and contextual shifts to bypass safety measures. Traditional safety training methods, like fine-tuning or RLHF for safety, focus on specific harmful inputs but are insufficient for handling the vast potential rephrasings that could still produce harmful outputs. A proposed solution is a "multi-level consistency supervision mechanism," which involves training models to generate safe responses for semantically similar queries, regardless of rephrasing, adding a context-sensitive detection module to monitor intent shifts in conversations, and applying post-output defenses to verify adherence to safety protocols in real-time. This comprehensive approach reduces the reliance on input-based safety, strengthens security across diverse contexts, and provides dynamic policy adaptation to maintain safety without compromising the model's utility for various user needs.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.13 -->
               <div class="discussion-item">
-                <h3>Trustworthiness in AI for Science</h3>
+                <h3>The Potential and Peril of LLMs for Application: A Case Study of Cybersecurity</h3>
+                <div class="discussion-content">
+                  <p>The integration of LLMs into cybersecurity brings both innovation and risk. While frameworks like SWE-bench and Cybench showcase their potential in areas like cryptography and automated testing, LLMs also amplify threats. They can accelerate zero-day exploit discovery, automate advanced social engineering, and generate polymorphic malware that evades detection. Beyond cybersecurity, similar risks arise: LLMs can create synthetic disinformation, fraudulent academic research, and accelerate dual-use technologies in genetic engineering or pharmaceuticals. Current governance efforts, such as OpenAI’s Usage Guidelines and Microsoft’s AI Framework, remain preliminary. Moving forward, priorities include developing domain-agnostic detection systems, adaptive defense mechanisms leveraging reinforcement learning, and robust red-teaming frameworks to preempt vulnerabilities. The cybersecurity experience highlights the need for comprehensive governance to balance AI’s transformative potential with safeguards against misuse.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.14 -->
+              <div class="discussion-item">
+                <h3>Trustworthiness of Generative Foundation Models in Medical Domain</h3>
+                <div class="discussion-content">
+                  <p>Integrating GenFMs into healthcare faces challenges in data quality, explainability, and regulation. Medical data is often noisy, incomplete, and constrained by privacy laws like HIPAA and GDPR, limiting sharing and model generalization. Standardized formats and secure collaborations are needed. Model explainability is vital for clinical trust, as opaque AI systems hinder adoption in high-stakes decisions. Techniques like feature visualization and attention mechanisms aim to enhance transparency without sacrificing performance, enabling collaboration between clinicians and AI. Regulatory frameworks struggle with the dynamic nature of GenFMs. Issues like liability, validation of iterative updates, and accountability require clearer standards. Collaborative efforts among policymakers, developers, and regulators are essential to ensure these models are safe, reliable, and ethically deployed in healthcare.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.15 -->
+              <div class="discussion-item">
+                <h3>Trustworthiness of Generative Foundation Models in AI for Science</h3>
                 <div class="discussion-content">
                   <p>Generative models in scientific fields like chemistry, biology, and materials science present unique trustworthiness challenges due to the critical need for precision, safety, and ethical compliance. While these models can accelerate discovery, they also risk generating harmful outputs, requiring a balance between innovation and caution. Trust in model outputs relies on transparency, validation, and clear uncertainty measures; human oversight remains essential to assess AI predictions critically. Responsible deployment frameworks, phased testing, ethical constraints, and experimental validation help ensure reliability and safety. This collaborative human-AI approach supports rapid scientific progress while upholding essential standards for safe and ethical application.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.16 -->
               <div class="discussion-item">
-                <h3>Trustworthiness and safety concerns in robotics and other embodiment of AGI</h3>
+                <h3>Trustworthiness Concerns in Robotics and Other Embodiment of Generative Foundation Models</h3>
                 <div class="discussion-content">
                   <p>The integration of large language and vision-language models into robots enhances their processing and recognition abilities but introduces safety risks. LLMs and VLMs can generate hallucinations and misinterpretations, which, when applied to robots, may lead to unsafe actions in the real world. Safety concerns arise in two areas: reasoning and planning, where poor decisions can cause accidents, and physical actions, where incorrect or forceful movements can harm humans or damage objects. Ensuring safety in embodied AGI requires robust control of both cognitive and physical behaviors, with adaptability to unexpected situations.</p>
                 </div>
                 <i class="discussion-toggle bi bi-chevron-right"></i>
               </div>
 
+              <!-- 10.17 -->
+              <div class="discussion-item">
+                <h3>Trustworthiness of Generative Foundation Models in Human-AI Collaboration</h3>
+                <div class="discussion-content">
+                  <p>Human-AI collaboration offers transformative potential but raises challenges in trust calibration and accountability. Trust calibration involves balancing overtrust and undertrust in AI outputs. Users' limited understanding of GenFMs, coupled with their opaque nature, complicates this process. Strategies like verbalized confidence scores, uncertainty estimation, and intuitive explainability mechanisms can help users evaluate AI reliability, fostering confident and effective collaboration. Accountability remains a significant concern, especially in error attribution. Determining whether errors stem from AI, humans, or both is complex. Solutions include fine-grained audits, decision pathway logging, and context-aware explanations. Error-aware interfaces that visually trace AI logic and flag issues can promote transparency and critical user engagement. By clarifying responsibility and improving system transparency, trust and accountability are strengthened, ensuring robust, ethical human-AI collaboration in high-stakes applications.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.18 -->
+              <div class="discussion-item">
+                <h3>The Role of Natural Noise in Shaping Model Robustness and Security Risks</h3>
+                <div class="discussion-content">
+                  <p>Robustness is a critical metric for evaluating GenFMs, measuring response consistency under natural perturbations. Our analysis highlights two key considerations: (1) Balancing robustness and overfitting risks. While adversarial training generally improves model stability, excessive optimization can lead to overfitting, reducing generalization to novel perturbations and degrading primary task performance. Balanced approaches are essential to mitigate these risks while leveraging noise benefits. (2) Diftness for prompt types. Models demonstrate higher robustness in close-ended queries, where consistency is crucial for safety-critical applications like autonomous driving or healthcare. Errors in such scenarios can have severe consequences. Open-ended queries, by contrast, tolerate variability, focusing more on coherence and relevance than strict consistency. Addressing these distinct needs ensures robust, reliable performance across both query types, enhancing GenFM applicability in diverse, high-stakes contexts.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- 10.19 -->
+              <div class="discussion-item">
+                <h3>Confronting Advanced AI Risks: A New Paradigm for Governing GenFMs</h3>
+                <div class="discussion-content">
+                  <p>The rapid evolution of GenFMs introduces Advanced AI Risks, requiring proactive governance beyond traditional mitigation strategies. (1) Self-replication and autonomy: GenFMs capable of autonomous replication or executing cyberattacks and bioengineering tasks pose catastrophic risks, necessitating safeguards to prevent misuse. (2) Persuasion and manipulation: These models can influence emotions and political opinions, threatening societal integrity and democratic processes. (3) Anthropomorphism: Assigning human-like traits to AI inflates trust, obscures accountability, and fosters misplaced confidence. Addressing these risks demands a comprehensive approach: clarifying AI intent and agency, prioritizing human oversight to ensure AI remains subordinate to human decision-making, and recognizing the systemic nature of advanced risks requiring global cooperation. Frameworks like Anthropic’s AI Safety Levels (ASL) categorize models based on potential threats, aligning safety measures with risk tiers. Continuous monitoring and dynamic trustworthiness criteria are essential to preempt vulnerabilities as GenFMs advance.</p>
+                </div>
+                <i class="discussion-toggle bi bi-chevron-right"></i>
+              </div>
 
             </div>
 
@@ -698,6 +769,14 @@
             <div class="swiper-slide"><img src="assets/img/clients/TAMU.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/lehigh.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/Lucy.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/UNC.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/UChi.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/allen.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/UMiami.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/ASU.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/UWM.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/NUS.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/C-CAS.png" class="img-fluid" alt=""></div>
           </div>
         </div>
 
@@ -728,28 +807,28 @@
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
+        <div class="col-lg-6 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
             <span class="sitename">TrustGen</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <!-- <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p> -->
+            <!-- <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p> -->
+            <p><strong>Email:</strong> <span>howiehwong@gmail.com</span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://trustgen.github.io/">Home</a></li>
+            <!-- <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li> -->
+            <li><i class="bi bi-chevron-right"></i> <a href="https://trustgen.github.io/trustgen_docs/">Docs</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="https://github.com/TrustGen">Github</a></li>
           </ul>
         </div>
-
+<!-- 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
@@ -758,9 +837,9 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="col-lg-4 col-md-12">
+        <!-- <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
           <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
           <div class="social-links d-flex">
@@ -769,7 +848,7 @@
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
