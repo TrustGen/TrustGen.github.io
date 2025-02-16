@@ -175,9 +175,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Configuration for the first Swiper instance
   const swiperConfig1 = {
     loop: true,
-    speed: 600,
+    speed: 200,
     autoplay: {
-      delay: 500,
+      delay: 1200,
     },
     slidesPerView: 'auto',
     pagination: {
@@ -208,9 +208,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Configuration for the second Swiper instance
   const swiperConfig2 = {
     loop: true,
-    speed: 600,
+    speed: 200,
     autoplay: {
-      delay: 500,
+      delay: 1200,
     },
     slidesPerView: 'auto',
     pagination: {
