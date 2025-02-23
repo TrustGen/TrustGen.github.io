@@ -862,7 +862,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -2199,3 +2199,15 @@ data-table {
   transition: width 0.3s ease; /* Smooth transition when width changes */
 }
 
+
+
+.icon-before-trustgen {
+  display: inline-block;
+  width: 20px; /* adjust the size */
+  height: 20px; /* adjust the size */
+  background-image: url('/assets/img/favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 2px; /* space between the icon and text */
+}
