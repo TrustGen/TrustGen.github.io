@@ -964,15 +964,44 @@ section,
 /*}*/
 
 #background-video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* 视频宽度设置为视口宽度 */
-  height: 100vh; /* 视频高度设置为视口高度 */
-  object-fit: cover; /* 保证视频充满整个容器并裁剪溢出的部分 */
-  z-index: -1; /* 将视频置于其他内容之后 */
-  mix-blend-mode: multiply; /* 将白色隐藏 */
-  transition: transform 2s ease-in-out, opacity 2s ease; /* 添加缩小和淡出效果的过渡 */
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* 小屏幕适配 */
+@media (max-width: 768px) {
+  #background-video {
+    transform: scale(1.2); /* 适当放大视频避免黑边 */
+  }
+}
+
+/* 超小屏幕纵向适配 */
+@media (max-width: 480px) and (orientation: portrait) {
+  #background-video {
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(1.3);
+  }
+}
+
+/* 超小屏幕横向适配 */
+@media (max-height: 480px) and (orientation: landscape) {
+  #background-video {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%) scale(1.3);
+  }
 }
 
 .shrink {
